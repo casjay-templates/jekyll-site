@@ -197,6 +197,10 @@ sass:
   sass_dir: _sass
   style: :expanded
 
+jekyll_tidy:
+  compress_html: true
+  exclude: ["*.md"]
+
 # Use the following plug-ins
 plugins:
   - jemoji
