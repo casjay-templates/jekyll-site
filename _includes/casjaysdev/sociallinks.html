@@ -1,6 +1,6 @@
 <p class="mx-auto" style="width: 200px;">
   Social Links: <br>
-  {% if site.social-links.rss %}<a href="{{ site.feed.path | relative_url }}"><i
+  {% if site.social-links.rss %}<a href="{{ site.feed.path | prepend: site.baseurl }}"><i
       class="svg-icon rss"></i></a>{% endif %}
 
   {% if site.social-links.github %}<a href="https://github.com/{{ site.social-links.github }}" target="_blank"><i

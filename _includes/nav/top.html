@@ -9,7 +9,8 @@
   </a>
 
   {% else %}
-  <a type="button" href="{{ p.url | relative_url }}" class="sidebar-nav-item btn btn-primary active">{{ p.title }}
+  <a type="button" href="{{ p.url | prepend: site.baseurl }}"
+    class="sidebar-nav-item btn btn-primary active">{{ p.title }}
 
   </a>
 

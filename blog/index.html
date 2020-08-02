@@ -7,10 +7,10 @@ weight: 1
 ---
 
 <div class="posts">
-  {% for post in site.posts %}
+  {% for post in .posts %}
   <div class="post">
     <div class="post-title">
-      <a href="{{ post.url | relative_url }}" class="post-title"
+      <a href="{{ post.url | prepend: site.baseurl }}" class="post-title"
         style="font-size: 30px;">{{ post.title | upcase }}</a><br>
     </div>
     <p>
@@ -24,16 +24,17 @@ weight: 1
 
     <span class="post-date">
       Posted by <a
-        href="{{ post.url | relative_url }}">{% if page.author %}{{ page.author }}{% else %}{{ site.author.name }}{% endif %}</a>
+        href="{{ post.url | prepend: site.baseurl }}">{% if page.author %}{{ page.author }}{% else %}{{ site.author.name }}{% endif %}</a>
       <br>on {{ post.date | date: '%B %d, %Y @ %H:%M' }}
 
 
       <div class="post-more"><br>
         {% if site.disqus %}
-        <a href="{{ post.url | relative_url }}#disqus_thread"> <i class="fa fa-comments"
+        <a href="{{ post.url | prepend: site.baseurl }}#disqus_thread"> <i class="fa fa-comments"
             aria-hidden="true"></i>Comment</a>&nbsp;
         {% endif %}
-        <a href="{{ post.url | relative_url }}"><i class="fa fa-plus-circle" aria-hidden="true"></i>Read more</a>
+        <a href="{{ post.url | prepend: site.baseurl }}"><i class="fa fa-plus-circle" aria-hidden="true"></i>Read
+          more</a>
       </div>
   </div>
   <hr />

@@ -4,7 +4,7 @@ Site Links:<br />
 {% if p.weight %}
 <ul>
   <li>
-    <a href="{{ p.url | relative_url }}">{{ p.title }}</a>
+    <a href="{{ p.url | prepend: site.baseurl }}">{{ p.title }}</a>
   </li>
 </ul>
 {% endif %}

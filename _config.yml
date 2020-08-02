@@ -12,8 +12,8 @@ tagline: "Serve it!"
 # URL of your avatar or profile pic (you could use your GitHub profile pic)
 avatar: "https://avatars2.githubusercontent.com/u/43266386?s=200&v=4"
 
-# full URI IE: /mysite
-baseurl: /jekyll-site
+# full URI IE: /mysite { Do not add trailing / }
+baseurl: "/abc"
 
 # set site author
 author:
@@ -109,7 +109,7 @@ blog:
   api:
 
 feed:
-  path: rss.xml
+  path: /rss.xml
   posts_limit: 20
 
 # You can find your shortname on the Settings page of your Disqus account
@@ -147,7 +147,7 @@ statuscounter:
 permalink: pretty
 
 pagination:
-  enabled: false
+  enabled: true
   debug: false
   collection: "posts"
   per_page: 10
@@ -170,6 +170,9 @@ collections:
   posts:
     output: true
     permalink: "/blog/:year/:month/:day/:title/"
+  tags:
+    output: true
+    permalink: "/blog/tags/:path/"
   docs:
     permalink: "/:collection/:path/"
     output: true
@@ -228,7 +231,7 @@ gems:
   - jekyll-remote-include
   - jekyll-menus
   - jekyll-remote-theme
-  - jekyll-paginate
+  - jekyll-paginate-v2
 
 include:
   - _pages
@@ -245,7 +248,6 @@ exclude:
 
 # full domain name IE: httmp://mysite.com
 url:
-
 #webrick:
 #  headers:
 #    Access-Control-Allow-Origin: "*"

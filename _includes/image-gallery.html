@@ -37,8 +37,8 @@
 
   <div class="col-md-4">
     <div class="thumbnail">
-      <a href="{{ file.path | relative_url }}" title="{{ filename }}">
-        <img src="{{ file.path | relative_url }}" alt="{{ filename }}" title="{{ filename }}" alt="Lights"
+      <a href="{{ file.path | prepend: site.baseurl }}" title="{{ filename }}">
+        <img src="{{ file.path | prepend: site.baseurl }}" alt="{{ filename }}" title="{{ filename }}" alt="Lights"
           style="width:100%">
         <div class="caption">
           <p>{{ filename }}</p>
