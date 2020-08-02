@@ -28,27 +28,17 @@ layout: default
         Post</span> &rarr;</a>
 
     <div>
-      <div class="related">
-        <h2>Related Posts</h2>
-        <ul class="related-posts">
-          {% for post in site.related_posts limit:3 %}
-        </ul>
-        <li>
-          <span>
-            <h3>
-              <a href="{{ site.baseurl }}{{ post.url }}">
-                {{ post.title }}
-              </a>
-              <h6>{{ post.date | date: '%B %d, %Y @ %H:%M' }}</h6>
-              </a>
-            </h3>
-          </span>
-        </li>
-        {% endfor %}
-        </ul>
-      </div>
+      <h2>Related Posts</h2>
+      {% for post in site.related_posts limit:3 %}
+      <p>
+      <h3>
+        <a href="{{ site.baseurl }}{{ post.url }}" class="h3"> {{ post.title }}</a>
+        <h6>{{ post.date | date: '%B %d, %Y @ %H:%M' }}</h6>
+      </h3>
+      </p>
+      {% endfor %}
+      </ul>
     </div>
-    {% include disqus.html %}
   </div>
-
+  {% include disqus.html %}
 </div>
