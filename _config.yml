@@ -146,23 +146,6 @@ statuscounter:
 # You don't need to change any of the configuration flags below !!
 permalink: pretty
 
-pagination:
-  enabled: true
-  debug: false
-  collection: "posts"
-  per_page: 10
-  permalink: "/page/:num/"
-  title: ":title - page :num"
-  limit: 0
-  sort_field: "date"
-  sort_reverse: true
-  category: "posts"
-  tag: ""
-  locale: "en_US"
-  trail:
-    before: 2
-    after: 2
-
 tag_page: "/blog/tags/"
 category_page: "/blog/categories/"
 
@@ -215,7 +198,7 @@ sass:
   style: :expanded
 
 # Use the following plug-ins
-gems:
+plugins:
   - jemoji
   - kramdown
   - jekyll-avatar
@@ -231,7 +214,6 @@ gems:
   - jekyll-remote-include
   - jekyll-menus
   - jekyll-remote-theme
-  - jekyll-paginate-v2
 
 include:
   - _pages
