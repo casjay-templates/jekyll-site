@@ -1,0 +1,22 @@
+<div>
+  {{ content }}
+</div>
+
+{% elsif site.custom_theme.columns == "2" %}
+<div>
+  {{ content }}
+</div>
+
+{% elsif site.custom_theme.columns == "3" %}
+<div>
+  {{ content }}
+</div>
+
+{% else %}
+<h1>
+  custom_theme/columns not set in _config.yml <br>
+  Your theme settings in _config.yml are incorrect <br>
+  Current columns: {{ site.custom_theme.columns }}
+</h1>
+{% endif %}
+</div>

@@ -1,0 +1,242 @@
+# This file contains configuration flags to customize your site
+
+# full domain name IE: httmp://mysite.com
+url:
+
+# full URI IE: /mysite
+baseurl: /jekyll-site
+
+# Name of your site (displayed in the header)
+name: "jekyll-casjaysdev"
+
+# Short bio or description (displayed in the header)
+description: "Jekyll theme for casjaysdev"
+
+# site tagline
+tagline: "Serve it!"
+
+# URL of your avatar or profile pic (you could use your GitHub profile pic)
+avatar: "https://avatars2.githubusercontent.com/u/43266386?s=200&v=4"
+
+# set site author
+author:
+  name: casjaysdev
+  url: http://casjay.net
+
+# set url for the contact form
+form:
+  submit_url: https://formspree.io/xknqkpjo
+
+# only set one of columns_ to enabled
+# set a custom theme - includes/themes
+# hacker
+custom_theme:
+  name: hacker
+  columns: "3"
+  footer: casjays-footer.html
+  header: casjays-header.html
+  nav:
+    bar: true
+    external: true
+    internal: true
+    top: nav/top.html
+    right: nav/sidebars/right.html
+    left: nav/sidebars/left.html
+
+# set default timezone
+timezone: America/New_York
+
+# set locale
+locale: "en"
+
+# Seperator for the the excerps
+excerpt_separator: "\n\n"
+
+# Set social media urls
+share-this:
+  rss: true
+  code: 5acc08103368f4001495b647
+  repo: https://github.com/casjay-templates/jekyll-site
+  email:
+  enabled:
+    footer: true
+    script: true
+
+# Includes an icon for each username you enter
+social-links:
+  rss: true
+  name: casjay
+  github: casjay
+  twitter: casjay
+  facebook: casjaysdev
+  flickr: casjay
+  instagram: casjay
+  linkedin: casjay
+  pinterest: casjaysdev
+  dribbble: casjay
+  email: casjay@cock.li
+  show_social: true
+
+# Verfication Settings
+webmaster_verifications:
+  google: 12345
+  bing: 12345
+  alexa: 12345
+  yandex: 12345
+  baidu: 12345
+
+# github options
+github:
+  show: true
+  repo:
+  user:
+  avatar:
+  forkme: true
+
+# Enable/Disable footer sections
+options:
+  engine: true
+  sharethis: true
+  legal: true
+  statcounter: true
+  google: true
+  ads: true
+  eucookie: true
+  rocketchat: true
+  piwik: true
+  discord: true
+
+# // TODO: Blog settings advanced feature
+blog:
+  enabled:
+  api:
+
+feed:
+  path: rss.xml
+  posts_limit: 20
+
+# You can find your shortname on the Settings page of your Disqus account
+disqus: casjay
+
+# Enter your Google Analytics web tracking code (e.g. UA-2110908-2) to activate tracking
+google:
+  analytics: UA-936146-1
+
+# piwik code
+piwik:
+  pre: https
+  id:
+  url:
+
+rocketchat:
+  url:
+
+discord:
+  enable: true
+  server: 430838999876108289
+  channel: 430838999876108291
+  horizontal: bottom
+  vertical: left
+
+statuscounter:
+  id: 8585230
+  code: ef07ac24
+  url: //c.statcounter.com/8585230/0/ef07ac24/0/
+
+# Name of theme
+#theme: jekyll-theme-slate
+
+# You don't need to change any of the configuration flags below !!
+permalink: pretty
+
+pagination:
+  enabled: true
+  debug: false
+  collection: "posts"
+  per_page: 10
+  permalink: "/page/:num/"
+  title: ":title - page :num"
+  limit: 0
+  sort_field: "date"
+  sort_reverse: true
+  category: "posts"
+  tag: ""
+  locale: "en_US"
+  trail:
+    before: 2
+    after: 2
+
+tag_page: "/blog/tags/"
+category_page: "/blog/categories/"
+
+# Jekyll 3 now only supports Kramdown for Markdown
+kramdown:
+  footnote_backlink: "&#x21A9;&#xFE0E;"
+  input: GFM
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    css_class: "highlight"
+
+# Set the Sass partials directory, as we're using @imports
+sass:
+  sass_dir: _sass
+  style: :expanded
+
+collections:
+  posts:
+    output: true
+
+redirect_from:
+  json: true
+
+# Use the following plug-ins
+gems:
+  - jemoji
+  - kramdown
+  - jekyll-avatar
+  - jekyll-feed
+  - jekyll-mentions
+  - jekyll-redirect-from
+  - jekyll-seo-tag
+  - jekyll-gist
+  - jekyll-coffeescript
+  - jekyll-assets
+  - jekyll-sitemap
+  - jekyll-analytics
+  - jekyll-remote-include
+  - jekyll-menus
+  - jekyll-remote-theme
+  - jekyll-paginate
+
+defaults:
+  - scope:
+      path: _docs
+      type: docs
+    values:
+      layout: docs
+  - scope:
+      path: _posts
+      type: posts
+    values:
+      layout: posts
+  - scope:
+      path: images
+      type: images
+    values:
+      layout: images
+
+include:
+  - _pages
+  - images
+
+# Exclude these files from your production _site
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE
+  - CNAME
+  - .keep
+  - .gitkeep
+#webrick:
+#  headers:
+#    Access-Control-Allow-Origin: "*"

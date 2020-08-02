@@ -1,0 +1,32 @@
+---
+layout: page
+title: Contact
+permalink: /contact/
+description: Have questions? I have answers.
+form: true
+weight: 3
+---
+
+<div class="text-center">
+  <p>Want to get in touch? Fill out the form below to send me a message and I will get back to you as soon
+    as possible!
+  </p>
+
+  <form action="{{ site.form.submit_url }}" method="POST" class="contact-form">
+    <fieldset>
+      <label for="stacked-name">Your Name:</label><br />
+      <input type="text" name="name" id="stacked-name" placeholder="Your Name" required="" />
+      <span class="pure-form-message">This is a required field.</span><br />
+
+      <label for="stacked-email">Your email:</label><br />
+      <input type="email" name="_replyto" id="stacked-email" placeholder="Your Email" required="" />
+      <span class="pure-form-message">This is a required field.</span><br />
+
+      <label for="stacked-message">Your Message:</label><br />
+      <textarea class="stacked-message" name="message" placeholder="What is your message?" required=""></textarea>
+      <span class="pure-form-message">This is a required field.</span><br />
+
+      <button type="submit" class="btn btn-primary btn-lg" id="sendMessageButton">Send Message</button>
+    </fieldset>
+  </form>
+</div>

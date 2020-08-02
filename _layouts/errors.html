@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "en-US" }}">
+
+<head>
+
+  {% include casjays-header.html %}
+
+  {% if site.custom_theme.name %}
+  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/{{ site.custom_theme.name }}.css">
+  <link rel="stylesheet" href="{{ site.custom_theme.css_file }}">
+  {% endif %}
+
+</head>
+
+<body onload="javascript:loadDomain();">
+  <div class="container-fluid align-items-center text-center align-middle">
+
+    {{ content }}
+
+    {% if site.github.forkme == true %}
+    <a class="github-fork-ribbon left-top" href="{{ site.github.repository_url }}/fork" data-ribbon="Fork me on GitHub"
+      title="Fork me on GitHub">Fork me on GitHub</a>
+    {% endif %}
+
+    <div class="footer footer-custom col-sm-12">
+      {% include {{ site.custom_theme.footer }} %}
+    </div>
+    <br><br><br><br><br><br><br>
+    </divcontainer-fluid>
+
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+---
+layout: errors
+permalink: /500.html
+title: OhOh Server error!
+---
+
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "en-US" }}">
+
+<head>
+  {% include casjays-header.html %}
+  {% if site.custom_theme.name %}
+  {% include themes/{{ site.custom_theme.name }}/meta.html %}
+  {% endif %}
+</head>
+
+<div class="container">
+  <h1>
+    <span class="glyphicon glyphicon-fire red"></span> <a href="https://www.google.com/search?q=server+error+500"
+      target="_blank"> 500 Internal Server Error
+  </h1>
+  </a><br>
+  <p class="lead">The web server is returning an internal error! Something is broken!!<br></p>
+  <h3><a href="{{ site.baseurl }}/" class="btn btn-outline-danger btn-lg btn-danger">Return Home</a></h3>
+  <div class="container">
+    <div class="body-content">
+      <img alt='error' src='https://static.casjay.net/default-icons/errors/404.gif'><br>
+    </div>
+  </div>
+  <a onclick=javascript:homepage(); class="btn btn-lg btn-success"><span id="display-domain"></span></a>
+</div>

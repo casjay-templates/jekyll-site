@@ -1,0 +1,41 @@
+---
+layout: page
+title: Blog
+permalink: /blog/
+description: Blog Posts
+weight: 1
+---
+
+<div class="posts">
+  {% for post in site.posts %}
+  <div class="post">
+    <div class="post-title">
+      <a href="{{ post.url | relative_url }}" class="post-title"
+        style="font-size: 30px;">{{ post.title | upcase }}</a><br>
+    </div>
+    <p>
+    <article style="font-size: 18px;">
+      {{ post.excerpt | markdownify }}
+    </article>
+    </p>
+    <br />
+    <span class="post-date">({% include read_time.html content=page.content %})</span>
+    <br />
+
+    <span class="post-date">
+      Posted by <a
+        href="{{ post.url | relative_url }}">{% if page.author %}{{ page.author }}{% else %}{{ site.author.name }}{% endif %}</a>
+      <br>on {{ post.date | date: '%B %d, %Y @ %H:%M' }}
+
+
+      <div class="post-more"><br>
+        {% if site.disqus %}
+        <a href="{{ post.url | relative_url }}#disqus_thread"> <i class="fa fa-comments"
+            aria-hidden="true"></i>Comment</a>&nbsp;
+        {% endif %}
+        <a href="{{ post.url | relative_url }}"><i class="fa fa-plus-circle" aria-hidden="true"></i>Read more</a>
+      </div>
+  </div>
+  <hr />
+  {% endfor %}
+</div>
