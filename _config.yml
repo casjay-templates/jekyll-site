@@ -13,7 +13,7 @@ tagline: "Serve it!"
 avatar: "https://avatars2.githubusercontent.com/u/43266386?s=200&v=4"
 
 # full URI IE: /mysite { Do not add trailing / }
-baseurl: "/abc"
+baseurl: "/jekyll-site"
 
 # set site author
 author:
