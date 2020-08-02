@@ -16,7 +16,8 @@
 <meta name="author" content="{{ site.author.name }}" />
 
 <link rel="canonical" href="{{ page.url | replace:'index.html','' }}">
-<link rel="alternate" type="application/rss+xml" title="{{ site.name }}" href="{{ site.feed.path }}" />
+<link rel="alternate" type="application/rss+xml" title="{{ site.name }}"
+  href="{{ site.feed.path | prepend: site.baseurl | prepend: site.url }}" />
 
 {% if page.title %}
 <meta property="og:title" content="{{ page.title }}" />
@@ -26,7 +27,7 @@
 <link href="https://fonts.googleapis.com/css2?Roboto&family=Roboto+Mono&display=swap" rel="stylesheet">
 
 <link rel="shortcut icon" href="{{ site.avatar }}" />
-<link rel="stylesheet" href="{{ /assets/css/base.css | prepend: site.baseurl }}" />
+<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/base.css" />
 <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/forms-min.css" />
 <link rel="stylesheet" href="https://static.casjay.net/default-css/github-ribbon.css" />
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
