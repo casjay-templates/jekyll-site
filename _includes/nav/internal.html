@@ -1,0 +1,12 @@
+Site Links:<br />
+{% assign navigation_pages = site.html_pages | sort: 'weight' %}
+{% for p in navigation_pages | uniq %}
+{% if p.weight %}
+<ul>
+  <li>
+    <a href="{{ p.url | prepend: site.baseurl }}">{{ p.title }}</a>
+  </li>
+</ul>
+{% endif %}
+{% endfor %}
+<br>

@@ -1,0 +1,21 @@
+{% if site.options.navigation.nonweighted == true %}
+{% assign pages_list = site.pages %}
+{% for node in pages_list %}
+{% if node.title != null %}
+{% if node.layout == "page" %}
+<a href="{{ site.baseurl }}{{ node.url }}">{{ node.title }}</a>
+{% endif %}
+{% endif %}
+{% endfor %}
+
+{% elsif site.options.navigation.weighted == true %}
+<nav>
+  {% assign navigation_pages = site.html_pages | sort: 'weight' %}
+  {% for p in navigation_pages %}
+  {% if p.weight %}
+  <a href="{{ site.baseurl }}{{ p.url }}" {% if p.url == page.url %} {% endif %}>{{ p.title }}</a>
+  {% endif %}
+  {% endfor %}
+</nav>
+
+{% endif %}

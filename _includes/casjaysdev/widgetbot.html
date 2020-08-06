@@ -1,0 +1,17 @@
+{% if site.discord.enable == true %}
+<!-- discord widget -->
+<script src="https://cdn.jsdelivr.net/npm/@widgetbot/crate@3" async defer>
+
+  new Crate({
+    server: '{{ site.discord.server }}',
+    channel: '{{ site.discord.channel }}',
+    location: ['{{ site.discord.horizontal }}', '{{ site.discord.vertical }}'],
+
+  })
+
+  crate.notify(
+
+  )
+</script>
+<!-- end discord widget -->
+{% endif %}

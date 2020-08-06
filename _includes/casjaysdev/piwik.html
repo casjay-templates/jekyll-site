@@ -1,0 +1,17 @@
+{% if site.piwik.url %}
+<script type="text/javascript">
+  var pkBaseURL = (("https:" == document.location.protocol) ? "{{ site.piwik.pre }}://{{ site.piwik.url }}/" :
+    "{{ site.piwik.pre }}://{{ site.piwik.url }}/");
+  document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+  try {
+    var piwikTracker = Piwik.getTracker(pkBaseURL + "piwik.php", {{ site.piwik.id }});
+  piwikTracker.trackPageView();
+  piwikTracker.enableLinkTracking();
+} catch (err) { }
+</script><noscript>
+  <p><img src="{{ site.piwik.url }}?idsite={{ site.piwik.id }}" class="c1" alt=""></p>
+</noscript>
+<br />
+{% endif %}

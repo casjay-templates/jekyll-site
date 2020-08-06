@@ -1,0 +1,50 @@
+<!-- Begin Theme header -->
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+<meta name="generator" content="CasjaysDev">
+
+{% if page.excerpt %}
+<meta name="description" content="{{ page.excerpt| strip_html }}" />
+<meta property="og:description" content="{{ page.excerpt| strip_html }}" />
+{% else %}
+<meta name="description" content="{{ site.description }}">
+<meta property="og:description" content="{{ site.description }}" />
+{% endif %}
+<meta name="author" content="{{ site.author.name }}" />
+
+<link rel="canonical" href="{{ page.url | replace:'index.html','' }}">
+<link rel="alternate" type="application/rss+xml" title="{{ site.name }}"
+  href="{{ site.feed.path | prepend: site.baseurl | prepend: site.url }}" />
+
+{% if page.title %}
+<meta property="og:title" content="{{ page.title }}" />
+<meta property="twitter:title" content="{{ page.title }}" />
+{% endif %}
+
+<link href="https://fonts.googleapis.com/css2?Roboto&family=Roboto+Mono&display=swap" rel="stylesheet">
+
+<link rel="shortcut icon" href="{{ site.avatar }}" />
+<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/base.css" />
+<link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/forms-min.css" />
+<link rel="stylesheet" href="https://static.casjay.net/default-css/github-ribbon.css" />
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.0/darkly/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
+
+<link rel="stylesheet" href="https://casjaysdev-sites.github.io/static.casjay.net/assets/css/hacker.css">
+
+<script src="https://cdn.jsdelivr.net/npm/@widgetbot/crate@3" async defer></script>
+<script src="htps://static.casjay.net/default-js/errorpages/isup.js"></script>
+<script src="https://static.casjay.net/default-js/errorpages/homepage.js"></script>
+<script src="https://static.casjay.net/default-js/errorpages/loaddomain.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fetch/2.0.1/fetch.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"></script>
+
+{% seo %}
+
+<!-- End Theme header -->

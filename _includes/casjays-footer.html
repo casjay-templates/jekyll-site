@@ -1,0 +1,71 @@
+<!-- Begin Footer -->
+<div class="footer-custom" align="center">
+  <br>
+
+  <!-- Social Links -->
+  {% if site.options.sharethis == true %}
+  {% include casjaysdev/sharethis.html %}
+  {% endif %}
+  <!-- End Social Links-->
+
+  <!-- Begin Casjays Developments Footer -->
+  {% if site.options.legal == true %}
+  {% include casjaysdev/legal.html %}
+  {% endif %}
+  <!-- End Casjays Developments Footer -->
+
+  <!-- Begin theme Code -->
+  {% if site.options.engine == true %}
+  {% include casjaysdev/theme.html %}
+  {% endif %}
+  <!-- End theme Code -->
+  <!-- Begin last updated -->
+  <span style="color: skyblue;">
+    Last update on: {{ site.time | date: '%B %d, %Y at %H:%M' }}
+  </span>
+  <!-- End last updated -->
+  <!--Begin Statcounter Code -->
+  {% if site.options.statcounter == true %}
+  {% include casjaysdev/statcounter.html %}
+  {% endif %}
+  <!-- End Statcounter Code -->
+
+  <!-- Begin Google Track -->
+  {% if site.options.google == true %}
+  {% include casjaysdev/google.html %}
+  {% endif %}
+  <!-- Eng Google Track -->
+
+  <!--Begin ads Code -->
+  {% if site.options.ads == true %}
+  {% include casjaysdev/ads.html %}
+  {% endif %}
+  <!-- End ads Code -->
+
+  <!-- Begin EU compliant -->
+  {% if site.options.eucookie == true %}
+  {% include casjaysdev/eucookie.html %}
+  {% endif %}
+  <!-- End EU compliant -->
+
+  <!-- Begin Piwik Tracking Code -->
+  {% if site.options.piwik == true %}
+  {% include casjaysdev/piwik.html %}
+  {% endif %}
+  <!-- End Piwik Tracking Code -->
+
+  <!-- Begin WidgetBot Code -->
+  {% if site.options.discord == true %}
+  {% include casjaysdev/widgetbot.html %}
+  {% endif %}
+  <!-- End WidgetBot Code -->
+
+  <!-- Start of Rocket.Chat Livechat Script -->
+  {% if site.options.rocketchat == true %}
+  {% include casjaysdev/rocketchat.html %}
+  {% endif %}
+  <!-- End of Rocket.Chat Livechat Script -->
+
+</div>
+<br /> <br />
+<!-- End Footer -->

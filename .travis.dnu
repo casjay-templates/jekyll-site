@@ -1,0 +1,28 @@
+dist: bionic
+
+language: shell
+
+addons:
+  apt:
+    update: true
+
+before_install:
+  - sudo apt-get install ruby-full build-essential zlib1g-dev -yy
+  - yes | sudo gem update --system --force >/dev/null 2>&1
+
+install:
+
+script:
+  - export GEM_HOME="$HOME/gems"
+  - export PATH="$HOME/gems/bin:$PATH"
+  - gem install bundler html-proofer jekyll jekyll-casjaysdev jekyll-theme-hacker
+  - gem update bundler
+  - jekyll build --future
+  - htmlproofer ./_site --only-4xx --check-favicon --check-html --disable-external --as-links
+
+env:
+  global:
+    - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
+
+notifications:
+  email: false

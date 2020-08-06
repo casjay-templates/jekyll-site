@@ -1,0 +1,21 @@
+<nav class="main-nav">
+
+  {% assign navigation_pages = site.html_pages | sort: 'weight' %}
+  {% for p in navigation_pages | uniq %}
+  {% if p.weight %}
+  {% if p.url == page.url %}
+
+  <a type="button" href="" class="sidebar-nav-item btn btn-outline-success disabled">{{ p.title }}
+  </a>
+
+  {% else %}
+  <a type="button" href="{{ p.url | prepend: site.baseurl }}"
+    class="sidebar-nav-item btn btn-primary active">{{ p.title }}
+
+  </a>
+
+  {% endif %}
+  {% endif %}
+  {% endfor %}
+
+</nav>

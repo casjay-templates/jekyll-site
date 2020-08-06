@@ -1,0 +1,73 @@
+<div class="container-fluid align-items-center text-center align-middle">
+  <div class="row custom-body">
+    <div class="col-lg-3 float-none">
+      <a href="{{ site.baseurl }}"><img src="{{ site.avatar }}" border="2" /></a>
+    </div>
+    <div class="col-lg-6">
+      <span>
+        <h1>.// {{ site.name }}</h1>
+        <h2>{{ site.description }}</h2>
+        <h5>{{ site.tagline }}</h5>
+      </span>
+
+      {% if site.custom_theme.nav.bar == true %}
+      <nav>
+        <br />
+        <h4>
+          {% include {{ site.custom_theme.nav.top }} %}
+        </h4>
+      </nav>
+      {% endif %}
+    </div>
+    {% if site.github.show %}
+    <div class="col-lg-3 float-none">
+      {% include github.html %}
+    </div>
+    {% endif %}
+    <hr style="width:50%" />
+  </div>
+
+  <br />
+  {% if site.custom_theme.columns == "1" %}
+  <div class="container-fluid">
+    <div class="row float-none align-items-center text-center align-middle">
+      <div class="col">{{ content }}</div>
+    </div>
+  </div>
+
+  {% elsif site.custom_theme.columns == "2" %}
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-3 float-none">
+      </div>
+      <div class="col-lg-6">{{ content }}</div>
+      <div class="col-lg-3 float-none">
+        {% include {{ site.custom_theme.nav.right }} %}
+    </div>
+  </div>
+
+  {% elsif site.custom_theme.columns == "3" %}
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-3 float-none">
+        {% include {{ site.custom_theme.nav.left }} %}
+      </div>
+      <div class="col-lg-6">
+        {{ content }}
+      </div>
+      <div class="col-lg-3 float-none">
+        {% include {{ site.custom_theme.nav.right }} %}</div>
+    </div>
+  </div>
+
+
+  {% else %}
+  <div class="container-fluid text-center align-middle col-md-6">
+    <h1 class="row">
+      custom_theme/columns not set in _config.yml <br>
+      Your theme settings in _config.yml are incorrect <br>
+      Current columns: {{ site.custom_theme.columns }}
+    </h1>
+  </div>
+  {% endif %}
+</div>
