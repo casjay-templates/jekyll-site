@@ -12,7 +12,7 @@ Gem::Specification.new do |spec|
   spec.license       = "MIT"
   spec.metadata    = { "source_code_uri" => "https://github.com/casjay-templates/jekyll-site" }
 
-  spec.files         = `git ls-files`
+  spec.files         = `git ls-files -z`.split("\x0")
 
   spec.add_runtime_dependency 'jekyll', '~> 3.8', '>= 3.8.6'
   spec.add_runtime_dependency 'jemoji'
