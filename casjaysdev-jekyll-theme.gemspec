@@ -2,7 +2,7 @@
 # coding: utf-8
 
 Gem::Specification.new do |spec|
-  spec.name          = "jekyll-casjaysdev"
+  spec.name          = "casjaysdev-jekyll-theme"
   spec.version       = "0.1.4"
   spec.authors       = ["CasjaysDev"]
   spec.email         = ["gem-admin@casjaysdev.com"]
@@ -32,6 +32,7 @@ Gem::Specification.new do |spec|
   spec.add_runtime_dependency 'jekyll-remote-theme'
   spec.add_runtime_dependency 'jekyll-paginate'
   spec.add_runtime_dependency 'jekyll-tidy'
+  spec.add_runtime_dependency 'github-pages'
 
   spec.add_development_dependency 'jekyll'
   spec.add_development_dependency 'bundler'
