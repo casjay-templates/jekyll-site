@@ -1,6 +1,12 @@
 <!-- Begin Footer -->
 <div class="footer-custom" align="center">
   <br>
+  
+  <!-- clock -->
+  {% if site.options.clock == true %}
+  {% include casjaysdev/clock.html %}
+  {% endif %}
+  <!-- End clock-->
 
   <!-- Social Links -->
   {% if site.options.sharethis == true %}
