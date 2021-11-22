@@ -1,0 +1,12 @@
+---
+layout: page
+title: Gallery
+permalink: /gallery/
+weight: 4
+---
+
+{% if site.gallery.enabled == true %}
+{% include image-gallery.html folder="/images/gallery" %}
+{% else %}
+<!-- Gallery is disabled -->
+{% endif %}

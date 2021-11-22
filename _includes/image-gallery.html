@@ -1,0 +1,31 @@
+<div class="row row-cols-2">
+  {% for file in site.static_files %}
+  {% if file.path contains include.folder %}
+  {% if file.extname == '.jpg' or file.extname == '.png' or file.extname == '.svg'
+  or file.extname == '.gif' or file.extname == '.jpeg' or file.extname == '.JPG'
+  or file.extname == '.JPEG' %}
+  {% assign filenameparts = file.path | split: "/" %}
+  {% assign filename = filenameparts | last | replace: file.extname,"" %}
+  <div class="col col-mb-2 cl-mr-2">
+    <div class="card h-100">
+      <div class="card-body">
+        <h5 class="card-title"></h5>
+        <p class="card-text">
+          <a href="{{ file.path | prepend: site.baseurl }}">
+            <img src="{{ file.path | prepend: site.baseurl }}" class="card-img-top" alt="{{ filename }}">
+          </a>
+        </p>
+      </div>
+      <div class="card-footer">
+        <small class="text-muted">
+          <a href="{{ file.path | prepend: site.baseurl }}">
+            {{ filename }}
+          </a>
+        </small>
+      </div>
+    </div>
+  </div>
+  {% endif %}
+  {% endif %}
+  {% endfor %}
+</div>
