@@ -3,7 +3,7 @@
 
 Gem::Specification.new do |spec|
   spec.name                  = 'casjaysdev-jekyll-theme'
-  spec.version               = '0.2.1'
+  spec.version               = '0.2.2'
   spec.authors               = ['CasjaysDev']
   spec.email                 = ['gem-admin@casjaysdev.com']
   
@@ -34,7 +34,7 @@ Gem::Specification.new do |spec|
   spec.add_runtime_dependency 'jekyll-menus', '~> 0.6', '>= 0.6.1'
   spec.add_runtime_dependency 'jekyll-remote-theme', '~> 0.4', '>= 0.4.3'
   spec.add_runtime_dependency 'jekyll-paginate', '~> 1.1'
-  spec.add_runtime_dependency 'jekyll-tidy', '~> 0.2', '>= 0.2.1'
+  spec.add_runtime_dependency 'jekyll-tidy', '~> 0.2.2'
 
   spec.add_development_dependency 'jekyll' '>= 3.5', '< 5.0'
   spec.add_development_dependency 'bundler', '~> 1.17', '>= 1.17.1'
