@@ -1,9 +1,11 @@
 External Links:<br />
-{% assign doclist = site.data.nav.external | sort: 'title' | uniq | %}
-{% for item in doclist %}
+{% assign doclist = site.data.nav.external | sort: 'title' | uniq | %} {% for
+item in doclist %}
 <ul>
   <li>
-    <a href="{{ item.url }}" alt="{{ item.title }}" target="_blank">{{ item.title }}</a>
+    <a href="{{ item.url }}" alt="{{ item.title }}" target="_blank"
+      >{{ item.title }}</a
+    >
   </li>
 </ul>
 {% endfor %}

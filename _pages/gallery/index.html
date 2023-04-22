@@ -1,12 +1,15 @@
 ---
-layout: page
+layout: default
 title: Gallery
 permalink: /gallery/
 weight: 4
+enabled:
 ---
 
 {% if site.gallery.enabled == true %}
-{% include image-gallery.html folder="/images/gallery" %}
-{% else %}
-<!-- Gallery is disabled -->
+<div>
+  {% include image-gallery.htm folder="/images/gallery" %}
+  <!-- Gallery is disabled -->
+  {% else %}
+</div>
 {% endif %}

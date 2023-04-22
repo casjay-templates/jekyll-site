@@ -1,75 +1,173 @@
 ---
-layout: page
+layout: default
 title: Contact
 permalink: /contact/
 description: Have questions? I have answers.
 form: true
 weight: 3
+enabled:
 ---
 
 {% if site.form.enabled == true %}
 <div class="text-center">
+  <h2>Want to get in touch?</h2>
+  <br />
   <p>
-  <h2>Want to get in touch?</h2><br />
-  Fill out the form below to send me a message<br />
-  and I will get back to you as soon as possible!
+    Fill out the form below to send me a message<br />
+    and I will get back to you as soon as possible!
   </p>
   <br />
   <fieldset>
     {% if site.form.type == "formspree" %}
-    <form action="{{ site.form.formspree.submit_url }}/{{ site.form.formspree.code }}" method="POST">
+    <form
+      action="{{ site.form.formspree.submit_url }}/{{ site.form.formspree.code }}"
+      method="POST"
+    >
       <label for="stacked-name">Your Name:</label><br />
-      <input type="text" name="name" id="stacked-name" placeholder="Your Name" required="" />
+      <input
+        type="text"
+        name="name"
+        id="stacked-name"
+        placeholder="Your Name"
+        required=""
+      />
       <span class="pure-form-message">This is a required field.</span><br />
 
       <label for="stacked-email">Your email:</label><br />
-      <input type="email" name="email" id="stacked-email" placeholder="Your Email" required="" />
+      <input
+        type="email"
+        name="email"
+        id="stacked-email"
+        placeholder="Your Email"
+        required=""
+      />
       <span class="pure-form-message">This is a required field.</span><br />
 
       <label for="stacked-message">Your Message:</label><br />
-      <textarea class="stacked-message" name="message" placeholder="What is your message?" required=""></textarea>
+      <textarea
+        class="stacked-message"
+        name="message"
+        placeholder="What is your message?"
+        required=""
+      ></textarea>
       <span class="pure-form-message">This is a required field.</span><br />
       <!-- your other form fields go here -->
+    </form>
+    <!-- End Form Spree -->
 
-      <!-- End Form Spree -->
+    {% elsif site.form.type == "formmail" %}
+    <form
+      action="{{ site.form.formmail.submit_url }}"
+      method="POST"
+      class="contact-form"
+    >
+      <input type="hidden" name="print_config" value="subject,Name,message" />
+      <input
+        type="hidden"
+        name="required"
+        value="{{ site.form.formmail.fields.required }}"
+      />
+      <input
+        type="hidden"
+        name="recipient"
+        value="{{ site.form.formmail.recipient }}"
+      />
+      <input
+        type="hidden"
+        name="subject"
+        value="{{ site.form.formmail.subject }}"
+      />
+      <input
+        type="hidden"
+        name="title"
+        value="{{ site.form.formmail.title }}"
+      />
+      <input
+        type="hidden"
+        name="env_report"
+        value="{{ site.form.formmail.env }}"
+      />
+      <input
+        type="hidden"
+        name="background"
+        value="{{ site.form.formmail.theme.background }}"
+      />
+      <input
+        type="hidden"
+        name="bgcolor"
+        value="{{ site.form.formmail.theme.bgcolor }}"
+      />
+      <input
+        type="hidden"
+        name="text_color"
+        value="{{ site.form.formmail.theme.text_color }}"
+      />
+      <input
+        type="hidden"
+        name="link_color"
+        value="{{ site.form.formmail.theme.link_color }}"
+      />
+      <input
+        type="hidden"
+        name="vlink_color"
+        value="{{ site.form.formmail.theme.vlink_color }}"
+      />
+      <input
+        type="hidden"
+        name="alink_color"
+        value="{{ site.form.formmail.theme.alink_color }}"
+      />
+      <input
+        type="hidden"
+        name="return_link_url"
+        value="{{ site.form.formmail.return_link.url }}"
+      />
+      <input
+        type="hidden"
+        name="return_link_title"
+        value="{{ site.form.formmail.return_link.title }}"
+      />
 
-      {% elsif site.form.type == "formmail" %}
-      <form action="{{ site.form.formmail.submit_url }}" method="POST" class="contact-form">
-        <input type=hidden name="print_config" value="subject,Name,message">
-        <input type=hidden name="required" value="{{ site.form.formmail.fields.required }}">
-        <input type=hidden name="recipient" value="{{ site.form.formmail.recipient }}">
-        <input type=hidden name="subject" value="{{ site.form.formmail.subject }}">
-        <input type=hidden name="title" value="{{ site.form.formmail.title }}">
-        <input type=hidden name="env_report" value="{{ site.form.formmail.env }}">
-        <input type=hidden name="background" value="{{ site.form.formmail.theme.background }}">
-        <input type=hidden name="bgcolor" value="{{ site.form.formmail.theme.bgcolor }}">
-        <input type=hidden name="text_color" value="{{ site.form.formmail.theme.text_color }}">
-        <input type=hidden name="link_color" value="{{ site.form.formmail.theme.link_color }}">
-        <input type=hidden name="vlink_color" value="{{ site.form.formmail.theme.vlink_color }}">
-        <input type=hidden name="alink_color" value="{{ site.form.formmail.theme.alink_color }}">
-        <input type=hidden name="return_link_url" value="{{ site.form.formmail.return_link.url }}">
-        <input type=hidden name="return_link_title" value="{{ site.form.formmail.return_link.title }}">
+      <label for="stacked-name">Your Name:</label><br />
+      <input
+        type="text"
+        name="{{ site.form.formmail.fields.name }}"
+        id="stacked-name"
+        placeholder="Your Name"
+        required=""
+      />
+      <span class="pure-form-message">This is a required field.</span><br />
 
-        <label for="stacked-name">Your Name:</label><br />
-        <input type="text" name="{{ site.form.formmail.fields.name }}" id="stacked-name" placeholder="Your Name"
-          required="" />
-        <span class="pure-form-message">This is a required field.</span><br />
+      <label for="stacked-email">Your email:</label><br />
+      <input
+        type="email"
+        name="{{ site.form.formmail.fields.email }}"
+        id="stacked-email"
+        placeholder="Your Email"
+        required=""
+      />
+      <span class="pure-form-message">This is a required field.</span><br />
 
-        <label for="stacked-email">Your email:</label><br />
-        <input type="email" name="{{ site.form.formmail.fields.email }}" id="stacked-email" placeholder="Your Email"
-          required="" />
-        <span class="pure-form-message">This is a required field.</span><br />
+      <label for="stacked-message">Your Message:</label><br />
+      <textarea
+        class="stacked-message"
+        name="{{ site.form.formmail.fields.message }}"
+        placeholder="What is your message?"
+        required=""
+      ></textarea>
+      <span class="pure-form-message">This is a required field.</span><br />
+      {% endif %}
 
-        <label for="stacked-message">Your Message:</label><br />
-        <textarea class="stacked-message" name="{{ site.form.formmail.fields.message }}"
-          placeholder="What is your message?" required=""></textarea>
-        <span class="pure-form-message">This is a required field.</span><br />
-        {% endif %}
-
-        <button type="submit" class="btn btn-primary btn-lg" id="sendMessageButton">Send Message</button>
+      <button
+        type="submit"
+        class="btn btn-primary btn-lg"
+        id="sendMessageButton"
+      >
+        Send Message
+      </button>
+    </form>
   </fieldset>
-  </form>
+  {% else %}
+  <!-- Contact form is disabled -->
 </div>
-{% else %}
-<!-- Contact form is disabled -->
 {% endif %}

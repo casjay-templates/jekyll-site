@@ -87,10 +87,6 @@ video {
   vertical-align: baseline;
 }
 
-* {
-  word-wrap: break-word !important;
-}
-
 body {
   margin: 0;
   padding: 0;
@@ -99,6 +95,7 @@ body {
   font-size: 16px;
   line-height: 25px;
   font-family: Roboto, Monaco, Terminal, monospace;
+  word-wrap: break-word;
 }
 
 article,

@@ -1,35 +1,45 @@
 {% if site.share-this.enabled.footer == true %}
-<div class="share-buttons" align="center">
+<div class="share-buttons">
   {% if site.share-this.rss %}
   <a href="{{ site.feed.path | prepend: site.baseurl }} ">
-    <img alt="RSS Feed" src="https://static.casjay.net/default-icons/social/rss-48x48.png" />
+    <img
+      alt="RSS Feed"
+      src="https://github.com/casjaysdev-sites/static.casjay.net/raw/main/default-icons/social/rss-48x48.png"
+    />
   </a>
-  {% endif %}
-
-  {% if site.share-this.repo %}
+  {% endif %} {% if site.share-this.repo %}
   <a href="{{ site.share-this.repo }}" target="_blank" title="Github">
-    <img alt="Tweet" src="https://static.casjay.net/default-icons/social/github-48x48.png" />
+    <img
+      alt="Tweet"
+      src="https://github.com/casjaysdev-sites/static.casjay.net/raw/main/default-icons/social/github-48x48.png"
+    />
   </a>
-  {% endif %}
-
-  {% if site.share-this.email %}
+  {% endif %} {% if site.share-this.email %}
   <a href="mailto:?subject=Thought you might like this site">
-    <img alt="Send via email" src="https://static.casjay.net/default-icons/social/email-48x48.png" />
+    <img
+      alt="Send via email"
+      src="https://github.com/casjaysdev-sites/static.casjay.net/raw/main/default-icons/social/email-48x48.png"
+    />
   </a>
   {% endif %}
   <br />
   <br />
   {% if site.share-this.enabled.script == true %}
-  <div class="container" style="width: 20%; margin: 0 auto; columns: auto; text-align: center;" align="center">
+  <div
+    class="container-fluid"
+    style="width: 20%; margin: 0 auto; columns: auto; text-align: center"
+    align="center"
+  >
     <div class="sharethis-inline-share-buttons"></div>
-    <script type='text/javascript'
-      src='https://platform-api.sharethis.com/js/sharethis.js#property={{ site.share-this.code }}&product=inline-share-buttons'
-      async='async'>
-      </script>
+    <script
+      type="text/javascript"
+      src="https://platform-api.sharethis.com/js/sharethis.js#property={{ site.share-this.code }}&product=inline-share-buttons"
+      async="async"
+    ></script>
   </div>
   {% endif %}
+  <br />
+  {% else %}
+  <!-- Share-this is disabled -->
 </div>
-<br />
-{% else %}
-<!-- Share-this is disabled -->
 {% endif %}

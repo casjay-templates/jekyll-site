@@ -1,49 +1,42 @@
 ---
-layout: page
+layout: default
 title: Blog
 permalink: /blog/
 description: Blog Posts
 weight: 99
 ---
-{% if site.blog.enabled == true %}
-<!-- <div class="row"> -->
-<div class="row">
-  {% for post in site.posts %}
-  {% if post.author %}
-  {% assign blog_author = post.author %}
-  {% elsif site.author.name %}
-  {% assign blog_author = site.author.name %}
-  {% endif %}
-  {% if post.site %}
-  {% assign author_site = post.site %}
-  {% elsif site.author.site %}
-  {% assign author_site = site.author.site %}
-  {% else %}
-  {% assign author_site = blog_author | prepend: 'http://github.com/' %}
-  {% endif %}
 
-  <div class="col-12">
+{% if site.blog.enabled == true %} {% for post in site.posts %} {% if
+post.author %} {% assign blog_author = post.author %} {% elsif site.author.name
+%} {% assign blog_author = site.author.name %} {% endif %} {% if post.site %} {%
+assign author_site = post.site %} {% elsif site.author.site %} {% assign
+author_site = site.author.site %} {% else %} {% assign author_site = blog_author
+| prepend: 'http://github.com/' %} {% endif %}
+<div class="row">
+  <div class="col-med-3">
     <div class="card border-success mb-3 vh-20">
       <div class="card-header bg-transparent border-success">
-        <a href="{{ post.url | prepend: site.baseurl }}" class="post-title" style="font-size: 30px;">
+        <a
+          href="{{ post.url | prepend: site.baseurl }}"
+          class="post-title"
+          style="font-size: 30px"
+        >
           {{ post.title | upcase }}
         </a>
       </div>
       <div class="card-body text-danger">
-        <p class="card-text">
-        <article style="font-size: 18px;">
-          {{ post.excerpt | markdownify }}
+        <article style="font-size: 18px">
+          <p class="card-text">{{ post.excerpt | markdownify }}</p>
         </article>
-        </p>
       </div>
       <div class="card-footer bg-transparent border-success">
         <span class="post-date">
           <a href="{{ post.url | prepend: site.baseurl }}">
-            ({% include read_time.html content=post.content %}) -
-            Read more
+            ({% include read_time.html content=post.content %}) - Read more
             <i class="fa fa-plus-circle" aria-hidden="true"> </i>
           </a>
-        </span><br />
+        </span>
+        <br />
         Posted by <a href="{{ author_site }}">{{ blog_author }} </a>
       </div>
       <br />
@@ -51,13 +44,14 @@ weight: 99
       <div class="card-footer bg-transparent border-danger">
         {% if site.disqus %}
         <a href="{{ post.url | prepend: site.baseurl }}#disqus_thread">
-          <i class="fa fa-comments" aria-hidden="true"></i> Comment </a>
+          <i class="fa fa-comments" aria-hidden="true"></i> Comment
+        </a>
         {% endif %}
       </div>
     </div>
   </div>
   {% endfor %}
+  <!-- Blog is disabled -->
+  {% else %}
 </div>
-{% else %}
-<!-- Blog is disabled -->
 {% endif %}

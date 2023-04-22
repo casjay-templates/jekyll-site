@@ -1,5 +1,24 @@
-{% if site.ads.url %}
-<br />
-{% else %}
-<!-- Ads is disabled -->
+{% if site.ads.enabled == true %} {% if site.ads.google.client &&
+site.ads.google.slot %}
+<div class="ads">
+  <script
+    async
+    defer
+    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+  ></script>
+  <!-- Single post - 1 (yourwebsite.com) -->
+  <ins
+    class="adsbygoogle"
+    style="display: block"
+    data-ad-slot="{{ slot }}"
+    data-ad-format="{{ format }}"
+    data-ad-client="{{ client }}"
+  ></ins>
+  <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+  <br />
+  {% endif %} {% else %}
+  <!-- Ads is disabled -->
+</div>
 {% endif %}

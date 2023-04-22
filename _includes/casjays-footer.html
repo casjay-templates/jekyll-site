@@ -1,79 +1,75 @@
 <!-- Begin Footer -->
-<div class="footer-custom" align="center">
+<div class="footer vh-100">
+  <div class="footer-custom fs-4">
+    <br />
+    <br />
+    <br />
+    <!-- Begin last updated -->
+    {% if site.options.last_updated == true %}
+    <span style="color: skyblue">
+      Last update on: {{ site.time | date: '%B %d, %Y at %H:%M' }}
+    </span>
+    <br />
+    <br />
+    {% endif %}
+    <!-- End last updated -->
+
+    <!-- Social Links -->
+    {% if site.options.sharethis == true %} {% include casjaysdev/sharethis.html
+    %} {% endif %}
+    <!-- End Social Links-->
+
+    <!-- Begin Casjays Developments Footer -->
+    {% if site.options.legal == true %} {% include casjaysdev/legal.html %} {%
+    endif %}
+    <!-- End Casjays Developments Footer -->
+
+    <!-- Begin theme Code -->
+    {% if site.options.engine == true %} {% include casjaysdev/theme.html %} {%
+    endif %}
+    <!-- End theme Code -->
+
+    <!-- clock -->
+    {% if site.options.clock == true %} {% include casjaysdev/clock.html %} {%
+    endif %}
+    <!-- End clock-->
+
+    <!--Begin Statcounter Code -->
+    {% if site.options.statcounter == true %} {% include
+    casjaysdev/statcounter.html %} {% endif %}
+    <!-- End Statcounter Code -->
+
+    <!-- Begin Google Track -->
+    {% if site.options.google == true %} {% include casjaysdev/google.html %} {%
+    endif %}
+    <!-- Eng Google Track -->
+
+    <!--Begin ads Code -->
+    {% if site.options.ads == true %} {% include casjaysdev/ads.html %} {% endif
+    %}
+    <!-- End ads Code -->
+
+    <!-- Begin EU compliant -->
+    {% if site.options.eucookie == true %} {% include casjaysdev/eucookie.html
+    %} {% endif %}
+    <!-- End EU compliant -->
+
+    <!-- Begin Piwik Tracking Code -->
+    {% if site.options.piwik == true %} {% include casjaysdev/piwik.html %} {%
+    endif %}
+    <!-- End Piwik Tracking Code -->
+
+    <!-- Begin WidgetBot Code -->
+    {% if site.options.discord == true %} {% include casjaysdev/widgetbot.html
+    %} {% endif %}
+    <!-- End WidgetBot Code -->
+
+    <!-- Start of Rocket.Chat Livechat Script -->
+    {% if site.options.rocketchat == true %} {% include
+    casjaysdev/rocketchat.html %} {% endif %}
+    <!-- End of Rocket.Chat Livechat Script -->
+  </div>
   <br />
-
-  <!-- Social Links -->
-  {% if site.options.sharethis == true %}
-  {% include casjaysdev/sharethis.html %}
-  {% endif %}
-  <!-- End Social Links-->
-
-  <!-- Begin Casjays Developments Footer -->
-  {% if site.options.legal == true %}
-  {% include casjaysdev/legal.html %}
-  {% endif %}
-  <!-- End Casjays Developments Footer -->
-
-  <!-- Begin theme Code -->
-  {% if site.options.engine == true %}
-  {% include casjaysdev/theme.html %}
-  {% endif %}
-  <!-- End theme Code -->
-
-  <!-- clock -->
-  {% if site.options.clock == true %}
-  {% include casjaysdev/clock.html %}
-  {% endif %}
-  <!-- End clock-->
-
-  <!-- Begin last updated -->
-  <span style="color: skyblue;">
-    Last update on: {{ site.time | date: '%B %d, %Y at %H:%M' }}
-  </span>
-  <!-- End last updated -->
-
-  <!--Begin Statcounter Code -->
-  {% if site.options.statcounter == true %}
-  {% include casjaysdev/statcounter.html %}
-  {% endif %}
-  <!-- End Statcounter Code -->
-
-  <!-- Begin Google Track -->
-  {% if site.options.google == true %}
-  {% include casjaysdev/google.html %}
-  {% endif %}
-  <!-- Eng Google Track -->
-
-  <!--Begin ads Code -->
-  {% if site.options.ads == true %}
-  {% include casjaysdev/ads.html %}
-  {% endif %}
-  <!-- End ads Code -->
-
-  <!-- Begin EU compliant -->
-  {% if site.options.eucookie == true %}
-  {% include casjaysdev/eucookie.html %}
-  {% endif %}
-  <!-- End EU compliant -->
-
-  <!-- Begin Piwik Tracking Code -->
-  {% if site.options.piwik == true %}
-  {% include casjaysdev/piwik.html %}
-  {% endif %}
-  <!-- End Piwik Tracking Code -->
-
-  <!-- Begin WidgetBot Code -->
-  {% if site.options.discord == true %}
-  {% include casjaysdev/widgetbot.html %}
-  {% endif %}
-  <!-- End WidgetBot Code -->
-
-  <!-- Start of Rocket.Chat Livechat Script -->
-  {% if site.options.rocketchat == true %}
-  {% include casjaysdev/rocketchat.html %}
-  {% endif %}
-  <!-- End of Rocket.Chat Livechat Script -->
-
+  <br />
 </div>
-<br /> <br />
 <!-- End Footer -->

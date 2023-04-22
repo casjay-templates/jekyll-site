@@ -1,10 +1,8 @@
-# This file contains configuration flags to customize your site
-
 # Name of your site (displayed in the header)
-name: "jekyll-casjaysdev"
+name: "domain-template"
 
 # Short bio or description (displayed in the header)
-description: "Jekyll theme for casjaysdev"
+description: "Primary theme for all sites"
 
 # site tagline
 tagline: "Serve it!"
@@ -20,35 +18,35 @@ baseurl: ""
 
 # set site author
 author:
-  name: CasjaysDev
-  site: http://casjay.net
+  name: 
+  site: 
 
 # set gallery image url
-gallery: 
-  enabled: true
+gallery:
+  enabled: false
   folder: "/images/gallery"
 
 # github options
 github:
   show: true
-  repo: jekyll-site
-  user: casjay-templates
-  avatar: casjay-templates
+  repo: 
+  user: 
+  avatar: 
   forkme: true
   layout: left-top
 
 # set url for the contact form
 form:
-  enabled: true
+  enabled: false
   type: "formspree"
   formspree:
     submit_url: "https://formspree.io/f"
-    code: "xknqkpjo"
+    code: ""
   formmail:
-    submit_url: "https://cgi.casjay.net/sendmail.cgi"
-    recipient: "form-submission@casjay.net"
-    subject: "jekyll-casjaysdev Contact Form"
-    title: "jekyll-casjaysdev"
+    submit_url: ""
+    recipient: "form-submission"
+    subject: "domain-template Contact Form"
+    title: "domain-template"
     env: "REMOTE_HOST,HTTP_USER_AGENT"
     return_link:
       url: "javascript: history.go(-1)"
@@ -59,16 +57,14 @@ form:
       message: "Message"
       required: "Name,Email,Message"
     theme:
-      background: "https://static.casjay.net/assets/images/bkg.png"
+      background: "https://casjaysdev-sites.github.io/static.casjay.net/assets/images/bkg.png"
       bgcolor: "#000000"
       text_color: "#ffffff"
       link_color: "#ffffff"
       vlink_color: "#ffffff"
       alink_color: "#ffffff"
 
-# only set one of columns_ to enabled
-# set a custom theme - includes/themes
-# hacker
+# only set one of columns t: set a custom theme - includes/themes
 custom_theme:
   name: hacker
   columns: "3"
@@ -79,8 +75,8 @@ custom_theme:
     external: true
     internal: true
     top: "nav/top.html"
-    right: "nav/sidebars/right.html"
     left: "nav/sidebars/left.html"
+    right: "nav/sidebars/right.html"
 
 # set default timezone
 timezone: America/New_York
@@ -95,7 +91,7 @@ excerpt_separator: "\n\n"
 share-this:
   rss: true
   code: "5acc08103368f4001495b647"
-  repo: "https://github.com/casjay-templates/jekyll-site"
+  repo: "https://github.com/casjay-templates/domain-template"
   email:
   enabled:
     footer: true
@@ -104,15 +100,15 @@ share-this:
 # Includes an icon for each username you enter
 social-links:
   rss: true
-  name: casjay
-  github: casjay
-  twitter: casjay
-  facebook: casjaysdev
-  flickr: casjay
-  instagram: casjay
-  linkedin: casjay
-  pinterest: casjaysdev
-  email: casjay@cock.li
+  name: 
+  github: 
+  twitter: 
+  facebook: 
+  flickr: 
+  instagram: 
+  linkedin: 
+  pinterest: 
+  email: 
   show_social: true
 
 # Verfication Settings
@@ -125,19 +121,25 @@ webmaster_verifications:
 
 # Enable/Disable footer sections
 options:
-  engine: true
-  sharethis: true
-  legal: true
-  statcounter: true
-  google: true
   ads: true
-  eucookie: true
-  rocketchat: true
-  piwik: true
-  discord: true
+  blog: true
+  legal: true
   clock: true
+  piwik: true
+  engine: true
+  google: true
+  discord: true
+  eucookie: true
+  sharethis: true
+  rocketchat: true
+  statcounter: true
+  last_updated: true
 
-# Blog settings 
+# theme footer link
+engine:
+  url: https://github.com/casjay-templates/jekyll-site
+
+# Blog settings
 blog:
   enabled: true
   api:
@@ -147,48 +149,53 @@ feed:
   path: /rss.xml
   posts_limit: 20
 
+# eu cookie
+eucookie:
+  enabled: true
+
 # You can find your shortname on the Settings page of your Disqus account
 disqus:
   enabled: true
   shortcode: casjay
 
 # clock settings
-clock: 
+clock:
   enabled: true
   url: "https://freesecure.timeanddate.com/clock/i7k2kmtc/n12/fn6/fs16/fc9ff/tc000/ftb/bas2/bat1/bacfff/pa8/tt0/tw1/th1/ta1/tb4"
 
 # Enter your Google Analytics web tracking code (e.g. UA-2110908-2) to activate tracking
 google:
-  analytics: UA-936146-1
+  analytics: 
 
 # Ads
 ads:
-  url: 
-  code: 
+  enabled: false
+  google:
+    format: auto
+    slot:
+    client:
 
 # piwik code
 piwik:
-  site_id:
   prefix: https
+  site_id:
   url:
 
+# enable rocketchat
 rocketchat:
   url:
 
 discord:
   enable: true
-  server: 430838999876108289
-  channel: 430838999876108291
+  server: 
+  channel: 
   horizontal: bottom
   vertical: left
 
 statuscounter:
-  id: 8585230
+  id: 
   code: ef07ac24
-  url: //c.statcounter.com/8585230/0/ef07ac24/0/
-
-# Name of theme
-theme: casjaysdev-jekyll-theme
+  url: //c.statcounter.com/REPLACEID/0/ef07ac24/0/
 
 # You don't need to change any of the configuration flags below !!
 permalink: pretty
@@ -196,6 +203,7 @@ permalink: pretty
 tag_page: "/blog/tags/"
 category_page: "/blog/categories/"
 
+# Setup collections
 collections:
   posts:
     output: true
@@ -212,16 +220,17 @@ collections:
   issues:
     output: true
     permalink: /issues/:name
-  wiki:
-    output: true
-    permalink: /wiki/:name
   recipes:
     output: true
     permalink: /recipes/:name
+  wiki:
+    output: true
+    permalink: /wiki/:name
 
 redirect_from:
 json: true
 
+# Set defaults
 defaults:
   - scope:
       path: _docs
@@ -239,20 +248,18 @@ defaults:
     values:
       layout: images
 
-destination: ./_docs
-
 # Jekyll 3 now only supports Kramdown for Markdown
 kramdown:
-  footnote_backlink: "&#x21A9;&#xFE0E;"
   input: GFM
   syntax_highlighter: rouge
+  footnote_backlink: "&#x21A9;&#xFE0E;"
   syntax_highlighter_opts:
     css_class: "highlight"
 
 # Set the Sass partials directory, as we're using @imports
 sass:
   sass_dir: _sass
-  style: :expanded
+  style: expanded
 
 jekyll_tidy:
   compress_html: true
@@ -262,6 +269,7 @@ jekyll_tidy:
 plugins:
   - jemoji
   - kramdown
+  - github-pages
   - jekyll-avatar
   - jekyll-feed
   - jekyll-mentions
@@ -270,13 +278,16 @@ plugins:
   - jekyll-gist
   - jekyll-coffeescript
   - jekyll-assets
-  - jekyll-sitemap
   - jekyll-analytics
   - jekyll-remote-include
   - jekyll-menus
   - jekyll-remote-theme
   - jekyll-tidy
+  - jekyll-theme-hacker
+  - casjaysdev-jekyll-theme
+  - domain-templatemap
 
+# Include folders and files
 include:
   - _pages
   - images
@@ -289,7 +300,12 @@ exclude:
   - CNAME
   - .keep
   - .gitkeep
+  - casjaysdev-jekyll-theme.gemspec
 
-#webrick:
-#  headers:
-#    Access-Control-Allow-Origin: "*"
+# Change output to _docs
+destination: ./_site
+
+# webrick options
+webrick:
+  headers:
+    Access-Control-Allow-Origin: "*"
