@@ -22,7 +22,7 @@ Gem::Specification.new do |spec|
   spec.add_runtime_dependency 'jekyll-feed', '~> 0.14.0'
   spec.add_runtime_dependency 'jekyll-mentions', '~> 1.6'
   spec.add_runtime_dependency 'jekyll-redirect-from', '~> 0.16.0'
-  spec.add_runtime_dependency 'jekyll-seo-tag' '~> 2.0'
+  spec.add_runtime_dependency 'jekyll-seo-tag', '~> 2.0'
   spec.add_runtime_dependency 'jekyll-gist', '~> 1.5'
   spec.add_runtime_dependency 'jekyll-coffeescript', '~> 2.0'
   spec.add_runtime_dependency 'jekyll-assets', '~> 3.0'
@@ -35,8 +35,8 @@ Gem::Specification.new do |spec|
   spec.add_runtime_dependency 'jekyll-tidy', '~> 0.2.2'
 
   spec.add_development_dependency 'jekyll' '> 3.5', '< 5.0'
-  spec.add_development_dependency 'bundler' ' >= 0'
-  spec.add_development_dependency 'rake' 'rake ~> 12.0'
+  spec.add_development_dependency 'bundler' '>= 0'
+  spec.add_development_dependency 'rake' '~> 12.0'
   spec.add_development_dependency 'sprockets', '~> 3.7'
 
   spec.post_install_message = "Thanks for installing!"
