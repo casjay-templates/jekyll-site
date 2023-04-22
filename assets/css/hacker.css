@@ -90,7 +90,7 @@ video {
 body {
   margin: 0;
   padding: 0;
-  background: #151515 url("https://static.casjay.net/assets/images/bkg.png") 0 0;
+  background: #151515 url("/assets/images/bkg.png") 0 0;
   color: #eaeaea;
   font-size: 16px;
   line-height: 25px;
@@ -367,7 +367,7 @@ dt {
 }
 
 ul li {
-  list-style-image: url("https://static.casjay.net/assets/images/bullet.png");
+  list-style-image: url("/assets/images/bullet.png");
 }
 
 blockquote {
@@ -462,7 +462,7 @@ hr {
 
 .btn-github .icon {
   opacity: 0.6;
-  background: url("https://static.casjay.net/assets/images/blacktocat.png") 0 0
+  background: url("/assets/images/blacktocat.png") 0 0
     no-repeat;
 }
 

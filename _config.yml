@@ -277,15 +277,10 @@ plugins:
   - jekyll-seo-tag
   - jekyll-gist
   - jekyll-coffeescript
-  - jekyll-assets
   - jekyll-analytics
   - jekyll-remote-include
   - jekyll-menus
   - jekyll-remote-theme
-  - jekyll-tidy
-  - jekyll-theme-hacker
-  - casjaysdev-jekyll-theme
-  - domain-templatemap
 
 # Include folders and files
 include:
