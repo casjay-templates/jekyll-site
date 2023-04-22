@@ -27,9 +27,11 @@
   <!-- End clock-->
 
   <!-- Begin last updated -->
+  {% if site.options.modified == true %}
   <span style="color: skyblue;">
     Last update on: {{ site.time | date: '%B %d, %Y at %H:%M' }}
   </span>
+  {% endif %}
   <!-- End last updated -->
 
   <!--Begin Statcounter Code -->
@@ -38,11 +40,11 @@
   {% endif %}
   <!-- End Statcounter Code -->
 
-  <!-- Begin Google Track -->
-  {% if site.options.google == true %}
-  {% include casjaysdev/google.html %}
+  <!-- Begin analytics Track -->
+  {% if site.options.analytics == true %}
+  {% include casjaysdev/analytics.html %}
   {% endif %}
-  <!-- Eng Google Track -->
+  <!-- Eng analytics Track -->
 
   <!--Begin ads Code -->
   {% if site.options.ads == true %}
@@ -55,12 +57,6 @@
   {% include casjaysdev/eucookie.html %}
   {% endif %}
   <!-- End EU compliant -->
-
-  <!-- Begin Piwik Tracking Code -->
-  {% if site.options.piwik == true %}
-  {% include casjaysdev/piwik.html %}
-  {% endif %}
-  <!-- End Piwik Tracking Code -->
 
   <!-- Begin WidgetBot Code -->
   {% if site.options.discord == true %}

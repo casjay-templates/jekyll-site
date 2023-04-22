@@ -3,27 +3,42 @@ layout: default
 ---
 
 <div class="container">
-  <div class="card border-success mb-3">
-    <article class="post">
-      <h1>{{ page.title }}</h1>
-      <div class="entry">
-        {{ content }}
-      </div>
-      <br /><br />
-      <div class="date">
-        Written by <a href="{{ page.site }}">{% if page.author %}{{ page.author }}{% else %}{{ site.author.name }}{%
-          endif %}</a> on {{ page.date | date: '%B %d, %Y @ %H:%M' }}
-      </div>
-      <br />
-    </article>
+  <div class="card-columns">
+    <div class="card border-success mb-3">
+      <article class="post">
+        <h1>{{ page.title }}</h1>
+        <div class="entry">{{ content }}</div>
+        <br /><br />
+        <div class="date">
+          Written by
+          <a href="{{ page.site }}"
+            >{% if page.author %}{{ page.author }}{% else %}{{ site.author.name
+            }}{% endif %}</a
+          >
+          on {{ page.date | date: '%B %d, %Y @ %H:%M' }}
+        </div>
+        <br />
+      </article>
+    </div>
   </div>
   <div class="paginate">
-    <a class="btn btn-primary" href="{{ page.previous.url | prepend: site.baseurl }}" data-toggle="tooltip"
-      data-placement="top" title="{{ page.previous.title }}">
-      &larr; Previous <span class="d-none d-md-inline">Post</span></a>
+    <a
+      class="btn btn-primary"
+      href="{{ page.previous.url | prepend: site.baseurl }}"
+      data-toggle="tooltip"
+      data-placement="top"
+      title="{{ page.previous.title }}"
+    >
+      &larr; Previous <span class="d-none d-md-inline">Post</span></a
+    >
 
-    <a class="btn btn-primary" href="{{ page.next.url | prepend: site.baseurl }}" data-toggle="tooltip"
-      data-placement="top" title="{{ page.next.title }}">
+    <a
+      class="btn btn-primary"
+      href="{{ page.next.url | prepend: site.baseurl }}"
+      data-toggle="tooltip"
+      data-placement="top"
+      title="{{ page.next.title }}"
+    >
       Next <span class="d-none d-md-inline">Post &rarr;</span>
     </a>
     <hr />
@@ -31,13 +46,14 @@ layout: default
     {% for post in site.related_posts limit:3 %}
     <ul>
       <li>
-        <h2><a href="{{ site.baseurl }}{{ post.url }}"> {{ post.title }} </a></h2>
+        <h2>
+          <a href="{{ site.baseurl }}{{ post.url }}"> {{ post.title }} </a>
+        </h2>
       </li>
     </ul>
     {% endfor %}
 
-    <div>
-    </div>
+    <div></div>
     {% include disqus.html %}
   </div>
 </div>

@@ -17,8 +17,8 @@ url:
 baseurl: ""
 
 # set site author
-author: 
-  name: NewUser 
+author:
+  name: NewUser
   site: /
 
 # set gallery image url
@@ -28,10 +28,11 @@ gallery:
 
 # github options
 github:
+  footer: true
   show: true
   repo: https://github.com/
-  user: 
-  avatar: 
+  user:
+  avatar:
   forkme: false
   layout: left-top
 
@@ -88,7 +89,7 @@ locale: "en"
 excerpt_separator: "\n\n"
 
 # Set social media urls
-share-this:
+share_this:
   rss: true
   code: ""
   repo: ""
@@ -98,17 +99,18 @@ share-this:
     script: true
 
 # Includes an icon for each username you enter
-social-links:
+social_links:
+  enabled: true
   rss: true
-  name: 
-  github: 
-  twitter: 
-  facebook: 
-  flickr: 
-  instagram: 
-  linkedin: 
-  pinterest: 
-  email: 
+  name:
+  github:
+  twitter:
+  facebook:
+  flickr:
+  instagram:
+  linkedin:
+  pinterest:
+  email:
   show_social: true
 
 # Verfication Settings
@@ -125,11 +127,11 @@ options:
   blog: true
   legal: true
   clock: true
-  piwik: true
   engine: true
-  google: true
   discord: true
+  modified: true
   eucookie: true
+  analytics: true
   sharethis: true
   rocketchat: true
   statcounter: true
@@ -156,7 +158,7 @@ eucookie:
 # You can find your shortname on the Settings page of your Disqus account
 disqus:
   enabled: true
-  shortcode: 
+  shortcode:
 
 # clock settings
 clock:
@@ -188,12 +190,12 @@ rocketchat:
 # discord bot
 discord:
   enable: true
-  server: 
-  channel: 
+  server:
+  channel:
   horizontal: bottom
   vertical: left
 
-# status counter 
+# status counter
 statuscounter:
   id: 8585230
   code: ef07ac24
