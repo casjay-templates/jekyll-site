@@ -31,7 +31,6 @@ Gem::Specification.new do |spec|
   spec.add_runtime_dependency 'jekyll-analytics', '~> 0.1.14'
   spec.add_runtime_dependency 'jekyll-remote-include', '~> 1.0', '>= 1.0.2'
   spec.add_runtime_dependency 'jekyll-menus', '~> 0.6.1'
-  spec.add_runtime_dependency 'casjaysdev-jekyll-theme', '>=0.1.7'
   spec.add_runtime_dependency 'jekyll-theme-hacker', '~> 0.2.0'
   spec.add_runtime_dependency 'faraday-retry', '~> 2.1'
   spec.add_runtime_dependency 'jekyll-watch', '~> 2.2', '>= 2.2.1'
