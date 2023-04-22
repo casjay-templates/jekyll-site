@@ -2,16 +2,17 @@
 # coding: utf-8
 
 Gem::Specification.new do |spec|
-  spec.name                  = "casjaysdev-jekyll-theme"
-  spec.version               = "0.2.0"
-  spec.authors               = ["CasjaysDev"]
-  spec.email                 = ["gem-admin@casjaysdev.com"]
-  spec.summary               = "CasjaysDev jekyll theme"
-  spec.description           = "Custom jekyll them I use"
-  spec.homepage              = "https://github.com/casjay-templates/jekyll-site"
-  spec.license               = "MIT"
-  spec.metadata              = { "source_code_uri" => "https://github.com/casjay-templates/jekyll-site" }
   spec.required_ruby_version = '>= 2.7.0'
+  spec.name                  = 'casjaysdev-jekyll-theme'
+  spec.version               = '0.2.0'
+  spec.authors               = ['CasjaysDev']
+  spec.email                 = ['gem-admin@casjaysdev.com']
+
+  spec.summary               = 'CasjaysDev jekyll theme'
+  spec.homepage              = 'https://github.com/casjay-templates/jekyll-site'
+  spec.license               = 'MIT'
+  spec.metadata              = { "source_code_uri" => "https://github.com/casjay-templates/jekyll-site" }
+
   spec.files                 = `git ls-files -z`.split("\x0")
 
   spec.add_runtime_dependency 'jekyll', '>= 3.5', '< 5.0'
