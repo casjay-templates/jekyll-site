@@ -18,8 +18,8 @@ baseurl: ""
 
 # set site author
 author:
-  name: 
-  site: 
+  name:
+  site:
 
 # set gallery image url
 gallery:
@@ -29,9 +29,9 @@ gallery:
 # github options
 github:
   show: true
-  repo: 
-  user: 
-  avatar: 
+  repo:
+  user:
+  avatar:
   forkme: true
   layout: left-top
 
@@ -57,7 +57,7 @@ form:
       message: "Message"
       required: "Name,Email,Message"
     theme:
-      background: "https://casjaysdev-sites.github.io/static.casjay.net/assets/images/bkg.png"
+      background: "https://casjaysdev-sites.github.io/static/assets/images/bkg.png"
       bgcolor: "#000000"
       text_color: "#ffffff"
       link_color: "#ffffff"
@@ -100,15 +100,15 @@ share-this:
 # Includes an icon for each username you enter
 social-links:
   rss: true
-  name: 
-  github: 
-  twitter: 
-  facebook: 
-  flickr: 
-  instagram: 
-  linkedin: 
-  pinterest: 
-  email: 
+  name:
+  github:
+  twitter:
+  facebook:
+  flickr:
+  instagram:
+  linkedin:
+  pinterest:
+  email:
   show_social: true
 
 # Verfication Settings
@@ -165,7 +165,7 @@ clock:
 
 # Enter your Google Analytics web tracking code (e.g. UA-2110908-2) to activate tracking
 google:
-  analytics: 
+  analytics:
 
 # Ads
 ads:
@@ -187,13 +187,13 @@ rocketchat:
 
 discord:
   enable: true
-  server: 
-  channel: 
+  server:
+  channel:
   horizontal: bottom
   vertical: left
 
 statuscounter:
-  id: 
+  id:
   code: ef07ac24
   url: //c.statcounter.com/REPLACEID/0/ef07ac24/0/
 
