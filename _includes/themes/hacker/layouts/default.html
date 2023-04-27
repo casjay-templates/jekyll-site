@@ -54,7 +54,7 @@
         <div class="col-lg-6">
           {% if site.function == default %}
             {{ content }}
-          {% elseif site.function and static_file.path == '/functions/{{ site.function }}.html' %}
+          {% elsif site.function and static_file.path == '/_includes/functions/{{ site.function }}.html' %}
             {% include functions/{{ site.function }}.html %}
           {% else %}
             {{ content }}
