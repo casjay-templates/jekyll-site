@@ -1,0 +1,43 @@
+---
+layout: default
+---
+
+<div class="container">
+  <article class="post">
+    <h1>{{ page.title }}</h1>
+
+    <div class="entry">
+      {{ content }}
+    </div>
+    <br /><br />
+    <div class="date">
+      Written by <a
+        href="{{ author.url }}">{% if page.author %}{{ page.author }}{% else %}{{ site.author.name }}{% endif %}</a> on
+      {{ page.date | date: '%B %d, %Y @ %H:%M' }}
+    </div>
+    <br />
+  </article>
+
+  <div class="paginate">
+    <a class="btn btn-primary" href="{{ page.previous.url | prepend: site.baseurl }}" data-toggle="tooltip"
+      data-placement="top" title="{{ page.previous.title }}">&larr; Previous<span class="d-none d-md-inline">
+        Post</span></a>
+
+    <a class="btn btn-primary" href="{{ page.next.url | prepend: site.baseurl }}" data-toggle="tooltip"
+      data-placement="top" title="{{ page.next.title }}">Next<span class="d-none d-md-inline">
+        Post</span> &rarr;</a>
+
+    <div>
+      <h2>Related Posts</h2>
+      {% for post in site.related_posts limit:3 %}
+      <hr />
+      <ul>
+        <li>
+          <h2><a href="{{ site.baseurl }}{{ post.url }}"> {{ post.title }}</a></h2>
+        </li>
+      </ul>
+      {% endfor %}
+    </div>
+  </div>
+  {% include disqus.html %}
+</div>

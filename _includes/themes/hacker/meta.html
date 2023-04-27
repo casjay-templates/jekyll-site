@@ -5,96 +5,41 @@
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="generator" content="{{ site.author.name }}" />
-
-{% if page.excerpt %}
-<meta name="description" content="{{ page.excerpt| strip_html }}" />
-<meta property="og:description" content="{{ page.excerpt| strip_html }}" />
-{% else %}
-<meta name="description" content="{{ site.description }}" />
-<meta property="og:description" content="{{ site.description }}" />
-{% endif %}
 <meta name="author" content="{{ site.author.name }}" />
 
-<link rel="canonical" href="{{ page.url | replace:'index.html','' }}" />
-<link
-  rel="alternate"
-  type="application/rss+xml"
-  title="{{ site.name }}"
-  href="{{ site.feed.path | prepend: site.baseurl | prepend: site.url }}"
-/>
-
-{% if page.title %}
-<meta property="og:title" content="{{ page.title }}" />
-<meta property="twitter:title" content="{{ page.title }}" />
+{% if page.excerpt %}
+  <meta name="description" content="{{ page.excerpt| strip_html }}" />
+  <meta property="og:description" content="{{ page.excerpt| strip_html }}" />
+{% else %}
+  <meta name="description" content="{{ site.description }}" />
+  <meta property="og:description" content="{{ site.description }}" />
 {% endif %}
 
-<link
-  href="https://fonts.googleapis.com/css2?Roboto&family=Roboto+Mono&display=swap"
-  rel="stylesheet"
-/>
+<link rel="canonical" href="{{ page.url | replace:'index.html','' }}" />
+<link rel="alternate" type="application/rss+xml" title="{{ site.name }}" href="{{ site.feed.path | prepend: site.baseurl | prepend: site.url }}"/>
 
+{% if page.title %}
+  <meta property="og:title" content="{{ page.title }}" />
+  <meta property="twitter:title" content="{{ page.title }}" />
+{% endif %}
+
+<link href="https://fonts.googleapis.com/css2?Roboto&family=Roboto+Mono&display=swap" rel="stylesheet"/>
 <link rel="shortcut icon" href="{{ site.avatar }}" />
 <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/hacker.css" />
 <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/base.css" />
-<link
-rel="stylesheet"
-  href="{{ site.baseurl }}/assets/css/bootstrap/darkly.css"
-/>
-<link
-  rel="stylesheet"
-  href="{{ site.baseurl }}/assets/css/bootstrap/bootstrap-icons.css"
-  integrity="sha384-b6lVK+yci+bfDmaY1u0zE8YYJt0TZxLEAFyYSLHId4xoVvsrQu3INevFKo+Xir8e"
-  crossorigin="anonymous"
-  />
-  <link
-  rel="stylesheet"
-  href="{{ site.baseurl }}/assets/css/bootstrap/font-awesome.css"
-  />
+<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/bootstrap/darkly.css"/>
+<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/bootstrap/bootstrap-icons.css" integrity="sha384-b6lVK+yci+bfDmaY1u0zE8YYJt0TZxLEAFyYSLHId4xoVvsrQu3INevFKo+Xir8e" crossorigin="anonymous" />
+<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/bootstrap/font-awesome.css" />
 <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/gh/ribbon.css" />
-<link
-  rel="stylesheet"
-  type="text/css"
-  href="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css"
-/>
-<link
-  rel="stylesheet"
-  href="{{ site.baseurl }}/assets/css/other/forms-min.css"
-/>
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css"/>
+<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/other/forms-min.css"/>
 
-<script
-  src="https://cdn.jsdelivr.net/npm/@widgetbot/crate@3"
-  async
-  defer
-></script>
-<script
-  src="{{ site.baseurl }}/assets/js/errorpages/isup.js"
-  async
-  defer
-></script>
-<script
-  src="{{ site.baseurl }}/assets/js/errorpages/homepage.js"
-  async
-  defer
-></script>
-<script
-  src="{{ site.baseurl }}/assets/js/errorpages/loaddomain.js"
-  async
-  defer
-></script>
-<script
-  src="{{ site.baseurl }}/assets/js/utils/fetch.min.js"
-  async
-  defer
-></script>
-<script
-  src="{{ site.baseurl }}/assets/js/utils/popper.min.js"
-  async
-  defer
-></script>
-<script
-  src="{{ site.baseurl }}/assets/js/utils/bootstrap.bundle.min.js"
-  async
-  defer
-></script>
+<script src="https://cdn.jsdelivr.net/npm/@widgetbot/crate@3" async defer></script>
+<script src="{{ site.baseurl }}/assets/js/errorpages/isup.js" async defer></script>
+<script src="{{ site.baseurl }}/assets/js/errorpages/homepage.js" async defer></script>
+<script src="{{ site.baseurl }}/assets/js/errorpages/loaddomain.js" async defer></script>
+<script src="{{ site.baseurl }}/assets/js/utils/fetch.min.js" async defer></script>
+<script src="{{ site.baseurl }}/assets/js/utils/popper.min.js" async defer></script>
+<script src="{{ site.baseurl }}/assets/js/utils/bootstrap.bundle.min.js" async defer></script>
 <!-- End Theme header -->
 {% seo %}

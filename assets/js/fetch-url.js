@@ -1,6 +1,4 @@
-fetch(
-  "https://github.com/casjaysdev-sites/casjaysdev-sites.github.io/static/raw/main/README.md"
-)
+fetch("https://casjaysdev-sites.github.io/static/README.md")
   .then(function (response) {
     return response.text();
   })

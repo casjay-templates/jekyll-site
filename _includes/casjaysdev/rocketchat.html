@@ -1,4 +1,5 @@
-{% if site.rocketchat.url %}
+{% if site.rocketchat.enabled == true %}
+<!-- begin rocketchat block --->
 <div class="rocketchat">
   <script type="text/javascript">
     (function (w, d, s, u) {
@@ -16,7 +17,6 @@
     })(window, document, "script", "{{ site.rocketchat.url }}/livechat");
   </script>
   <br />
-  {% else %}
-  <!-- rocketchat is disabled -->
 </div>
+<!-- end rocketchat block --->
 {% endif %}

@@ -1,44 +1,33 @@
 ---
 layout: errors
 permalink: /500.html
-title: OhOh Server error!
+title: Oh-No Server error!
 ---
 
 <!DOCTYPE html>
 <html lang="{{ site.lang | default: 'en-US' }}">
   <head>
-    <link
-      rel="stylesheet"
-      href="{{ site.baseurl }}/assets/css/errorpages/errorpages.css"
-    />
-    {% include casjays-header.html %} {% if site.custom_theme.name %} {% include
-    themes/{{ site.custom_theme.name }}/meta.html %} {% endif %}
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/errorpages/errorpages.css"/>
+    {% include casjays-header.html %} 
+    {% if site.custom_theme.name %} 
+      {% include themes/{{ site.custom_theme.name }}/meta.html %} 
+    {% endif %}
   </head>
 
   <div class="container-fluid" onload="javascript:loadDomain();">
     <h1>
       <span class="glyphicon glyphicon-fire red"></span>
-      <a
-        href="https://www.google.com/search?q=server+error+500"
-        target="_blank"
-      >
-        500 Internal Server Error
-      </a>
+      <a href="https://www.google.com/search?q=server+error+500" target="_blank">500 Internal Server Error</a>
     </h1>
     <br />
-    <p class="lead">
+    <p class="lead fs-2">
       The web server is returning an internal error! Something is broken!!<br />
     </p>
     <div class="container-fluid">
       <div class="body-content">
-        <img
-          alt="error"
-          src="{{ site.baseurl }}/assets/images/oops.gif"
-        /><br />
+        <img alt="error" src="{{ site.baseurl }}/assets/images/oops.gif"/><br />
       </div>
     </div>
-    <a onclick="javascript:homepage();" class="btn btn-lg btn-success"
-      ><span id="display-domain"></span
-    ></a>
+    <a onclick="javascript:homepage();" class="btn btn-lg btn-success"><span id="display-domain"></span></a>
   </div>
 </html>

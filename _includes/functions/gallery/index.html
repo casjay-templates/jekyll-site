@@ -7,9 +7,7 @@ enabled:
 ---
 
 {% if site.gallery.enabled == true %}
-<div>
-  {% include image-gallery.htm folder="/images/gallery" %}
-  <!-- Gallery is disabled -->
-  {% else %}
-</div>
+  <div>
+    {% include functions/gallery.html folder="{% site.gallery.folder %}" %}
+  </div>
 {% endif %}

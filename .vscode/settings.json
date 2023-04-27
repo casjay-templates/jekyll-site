@@ -1,0 +1,6 @@
+{
+  "liquid.engine": "jekyll",
+  "files.associations": {
+    "*.html": "liquid"
+  }
+}

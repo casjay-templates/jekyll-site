@@ -7,38 +7,26 @@ title: Ummm You did that wrong!
 <!DOCTYPE html>
 <html lang="{{ site.lang | default: 'en-US' }}">
   <head>
-    <link
-      rel="stylesheet"
-      href="{{ site.baseurl }}/assets/css/errorpages/errorpages.css"
-    />
-    {% include casjays-header.html %} {% if site.custom_theme.name %} {% include
-    themes/{{ site.custom_theme.name }}/meta.html %} {% endif %}
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/errorpages/errorpages.css"/>
+    {% include casjays-header.html %} 
+    {% if site.custom_theme.name %} 
+      {% include themes/{{ site.custom_theme.name }}/meta.html %} 
+    {% endif %}
   </head>
 
   <div class="container-fluid">
     <h1>
-      <i class="fa fa-frown-o red"></i
-      ><a
-        href="https://www.google.com/search?q=server+error+404"
-        target="_blank"
-        >404 Not Found
-      </a>
+      <i class="fa fa-frown-o red"></i><a href="https://www.google.com/search?q=server+error+404" target="_blank" >404 Not Found</a>
     </h1>
     <br />
-    <p class="lead">
-      We apologize but we can't seem to be able to find what you're looking
-      for!<br />
+    <p class="lead fs-2">
+      We apologize but we can't seem to be able to find what you're looking for!<br />
     </p>
     <div class="container-fluid">
       <div class="body-content">
-        <img
-          alt="error"
-          src="{{ site.baseurl }}/assets/images/oops.gif"
-        /><br />
+        <img alt="error" src="{{ site.baseurl }}/assets/images/oops.gif"/><br />
       </div>
     </div>
-    <a onclick="javascript:homepage();" class="btn btn-lg btn-success"
-      ><span id="display-domain"></span
-    ></a>
+    <a onclick="javascript:homepage();" class="btn btn-lg btn-success"><span id="display-domain"></span></a>
   </div>
 </html>

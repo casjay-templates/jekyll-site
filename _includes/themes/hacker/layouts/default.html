@@ -11,12 +11,12 @@
       </span>
 
       {% if site.custom_theme.nav.bar == true %}
-      <nav>
-        <br />
-        <h4>
-          {% include {{ site.custom_theme.nav.top }} %}
-        </h4>
-      </nav>
+        <nav>
+          <br />
+          <h4>
+            {% include {{ site.custom_theme.nav.top }} %}
+          </h4>
+        </nav>
       {% endif %}
     </div>
     {% if site.github.show %}
@@ -24,7 +24,7 @@
       {% include github.html %}
     </div>
     {% endif %}
-    <hr style="width:50%" />
+    <hr class="hr" style="border: none;border-top: 3px double #dfdbdb;color: #949393;overflow: visible;text-align: center;height: 5px;margin-left:25% !important; margin-right:25% !important" />
   </div>
 
   <br />
@@ -36,38 +36,41 @@
   </div>
 
   {% elsif site.custom_theme.columns == "2" %}
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-lg-3 float-none">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-3 float-none">
+        </div>
+        <div class="col-lg-6">{{ content }}</div>
+        <div class="col-lg-3 float-none">
+          {% include {{ site.custom_theme.nav.right }} %}
       </div>
-      <div class="col-lg-6">{{ content }}</div>
-      <div class="col-lg-3 float-none">
-        {% include {{ site.custom_theme.nav.right }} %}
     </div>
-  </div>
-
   {% elsif site.custom_theme.columns == "3" %}
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-lg-3 float-none">
-        {% include {{ site.custom_theme.nav.left }} %}
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-3 float-none">
+          {% include {{ site.custom_theme.nav.left }} %}
+        </div>
+        <div class="col-lg-6">
+          {% if site.function == default %}
+            {{ content }}
+          {% elif site.function and static_file.path == '/functions/{{ site.function }}.html' %}
+            {% include functions/{{ site.function }}.html %}
+          {% else %}
+            {{ content }}
+          {% endif %}
+        </div>
+        <div class="col-lg-3 float-none">
+          {% include {{ site.custom_theme.nav.right }} %}</div>
       </div>
-      <div class="col-lg-6">
-        {{ content }}
-      </div>
-      <div class="col-lg-3 float-none">
-        {% include {{ site.custom_theme.nav.right }} %}</div>
     </div>
-  </div>
-
-
   {% else %}
-  <div class="container-fluid text-center align-middle col-md-6">
-    <h1 class="row">
-      custom_theme/columns not set in _config.yml <br>
-      Your theme settings in _config.yml are incorrect <br>
-      Current columns: {{ site.custom_theme.columns }}
-    </h1>
-  </div>
+    <div class="container-fluid text-center align-middle col-md-6">
+      <h1 class="row">
+        custom_theme/columns not set in _config.yml <br>
+        Your theme settings in _config.yml are incorrect <br>
+        Current columns: {{ site.custom_theme.columns }}
+      </h1>
+    </div>
   {% endif %}
 </div>

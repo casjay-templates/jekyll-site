@@ -1,4 +1,5 @@
-{% if site.discord.enable == true %}
+{% if site.discord.enabled == true %}
+<!-- begin discord bot block --->
 <script src="https://cdn.jsdelivr.net/npm/@widgetbot/crate@3" async defer>
   new Crate({
     server: '{{ site.discord.server }}',
@@ -7,4 +8,5 @@
   })
   crate.notify()
 </script>
+<!-- end discord bot block --->
 {% endif %}

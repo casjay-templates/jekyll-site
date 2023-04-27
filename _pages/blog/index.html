@@ -6,12 +6,18 @@ description: Blog Posts
 weight: 99
 ---
 
-{% if site.blog.enabled == true %} {% for post in site.posts %} {% if
-post.author %} {% assign blog_author = post.author %} {% elsif site.author.name
-%} {% assign blog_author = site.author.name %} {% endif %} {% if post.site %} {%
-assign author_site = post.site %} {% elsif site.author.site %} {% assign
-author_site = site.author.site %} {% else %} {% assign author_site = blog_author
-| prepend: 'http://github.com/' %} {% endif %}
+{% if site.blog.enabled == true %} 
+{% for post in site.posts %} 
+{% if post.author %} {% assign blog_author = post.author %} 
+{% elsif site.author.name %}
+{% assign blog_author = site.author.name %} 
+{% endif %} 
+{% if post.site %} 
+{% assign author_site = post.site %} {% elsif site.author.site %} 
+  {% assign author_site = site.author.site %} 
+  {% else %} 
+  {% assign author_site = blog_author prepend: 'http://github.com/' %} 
+{% endif %}
 <div class="row">
   <div class="col-med-3">
     <div class="card border-success mb-3 vh-20">
@@ -51,7 +57,5 @@ author_site = site.author.site %} {% else %} {% assign author_site = blog_author
     </div>
   </div>
   {% endfor %}
-  <!-- Blog is disabled -->
-  {% else %}
 </div>
 {% endif %}

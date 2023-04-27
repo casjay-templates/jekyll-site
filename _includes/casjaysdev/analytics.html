@@ -1,0 +1,38 @@
+{% if site.analytics.google.site_id %}
+<!-- begin google analytics block --->
+<div class="analytics">
+  <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.analytics.google.site_id }}"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag("js", new Date());
+    gtag("config", "{{ site.analytics.google.site_id }}");
+  </script>
+  <br />
+</div>
+<!-- end google analytics block --->
+{% endif %} 
+{% if site.analytics.piwik.site_id %}
+<!-- begin piwik analytics block --->
+<div class="piwik">
+  <script>
+    var _paq = (window._paq = window._paq || []);
+    /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+    _paq.push(["trackPageView"]);
+    _paq.push(["enableLinkTracking"]);
+    (function () {
+      var u = "{{ site.analytics.piwik.prefix }}://{{ site.analytics.piwik.url }}/";
+      _paq.push(["setTrackerUrl", u + "matomo.php"]);
+      _paq.push(["setSiteId", "{{ site.analytics.piwik.site_id }}"]);
+      var d = document,
+        g = d.createElement("script"),
+        s = d.getElementsByTagName("script")[0];
+      g.async = true;
+      g.src = u + "matomo.js";
+      s.parentNode.insertBefore(g, s);
+    })();
+  </script>
+  <br />
+</div>
+<!-- end piwik analytics block --->
+{% endif %}
