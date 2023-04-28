@@ -7,7 +7,7 @@ weight: 99
 ---
 
 {% if site.blog.enabled == true %} 
-<div class="container text-center">
+<div class="container text-center clearfix">
   {% for post in site.posts %} 
   {% if post.author %} {% assign blog_author = post.author %} 
   {% elsif site.author.name %}
