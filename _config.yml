@@ -16,6 +16,9 @@ avatar: 'https://avatars2.githubusercontent.com/u/43266386?s=200&v=4'
 # full URI IE: /mysite { Do not add trailing / }
 baseurl: '/jekyll-site'
 
+# set theme name
+theme: casjaysdev-jekyll-theme
+
 # set site author
 author:
   name:
@@ -90,6 +93,17 @@ locale: 'en'
 
 # Seperator for the the excerps
 excerpt_separator: "\n\n"
+
+# error settings
+error_pages:
+  show_fork: true
+  show_footer: true
+  footer_template: 'casjays-footer.html'
+  error_image: '/assets/images/oops.gif'
+  css_file: '/assets/css/errorpages/errorpages.css'
+  font_site:
+    header: '48px'
+    body: '24px'
 
 # Set social media urls
 share_this:
@@ -296,6 +310,8 @@ plugins:
   - jekyll-menus
   - jekyll-remote-theme
   - jekyll-tidy
+  - jekyll-admin
+  - jekyll_pages_api
 
 keep_files:
   - default-*

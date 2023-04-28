@@ -1,32 +1,49 @@
 ---
-layout: errors
+layout: null
+search: exclude
 permalink: /404.html
-title: Ummm You did that wrong!
 ---
 
 <!DOCTYPE html>
-<html lang="{{ site.lang | default: 'en-US' }}">
-  <head>
-    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/errorpages/errorpages.css"/>
-    {% include casjays-header.html %} 
-    {% if site.custom_theme.name %} 
-      {% include themes/{{ site.custom_theme.name }}/meta.html %} 
-    {% endif %}
-  </head>
+<html lang="{{ site.lang | default: " en-US" }}">
 
+<head>
+  <link rel="stylesheet" href="{{ site.error_pages.css_file | prepend: site.baseurl }}">
+  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/{{ site.custom_theme.name }}.css">
+  {% if site.custom_theme.name %}
+    {% include casjays-header.html %}
+  {% endif %}
+  <title>404 Not Found</title>
+</head>
+
+<body class="vh-100" onload="javascript:loadDomain();">
   <div class="container">
-    <h1>
-      <i class="fa fa-frown-o red"></i><a href="https://www.google.com/search?q=server+error+404" target="_blank" >404 Not Found</a>
-    </h1>
-    <br />
-    <p class="lead fs-2">
-      We apologize but we can't seem to be able to find what you're looking for!<br />
-    </p>
-    <div class="container">
-      <div class="body-content">
-        <img alt="error" src="{{ site.baseurl }}/assets/images/oops.gif"/><br />
+    <div class=" align-items-center text-center">
+      <br />
+      <div style="font-size: {{ site.error_pages.font_site.header }};">
+        <span class="fa fa-ban red"></span>
+        <a href="https://duckduckgo.com/?q=http+status+code+404" target="_blank">
+          404 Not Found
+        </a>
+        <br /><br />
       </div>
+      <div style="font-size: {{ site.error_pages.font_site.body }};" class="lead body-content">
+        We apologize but we can't seem to be able<br />
+        to find what you're looking for!!<br />
+        <img alt="error" height="400" width="400" src="{{ site.error_pages.error_image | prepend: site.baseurl }}"/>
+      </div>
+        <a style="cursor: pointer;" onclick="javascript:homepage();" class="btn btn-success"><span id="display-domain"></span></a>
+        <br />
+        {% if site.error_pages.show_fork == true %}
+          <a class="github-fork-ribbon left-top" href="{{ site.github.repository_url }}/fork" data-ribbon="Fork me on GitHub" title="Fork me on GitHub">Fork me on GitHub</a>
+        {% endif %}
+        {% if site.error_pages.show_footer == true %}
+          <div class="footer footer-custom col-sm-12">
+            {% include {{ site.error_pages.footer_template }} %}
+          </div><br /><br /><br /><br />
+        {% endif %}
+        <br /><br /><br />
     </div>
-    <a onclick="javascript:homepage();" class="btn btn-lg btn-success"><span id="display-domain"></span></a>
   </div>
+</body>
 </html>

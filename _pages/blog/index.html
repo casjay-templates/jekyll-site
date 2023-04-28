@@ -7,7 +7,8 @@ weight: 99
 ---
 
 {% if site.blog.enabled == true %} 
-  <div class="container-fluid text-center clearfix">
+<div class="clearfix">
+  <div class="container text-center">
     <div class="row row-cols-1">
     {% for post in site.posts %} 
     {% if post.author %} 
@@ -55,5 +56,6 @@ weight: 99
     {% endfor %}
   </div>
 </div>
-  {% endif %}
+</div>  
+{% endif %}
   
