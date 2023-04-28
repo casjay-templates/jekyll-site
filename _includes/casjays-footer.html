@@ -1,6 +1,6 @@
 <!-- Begin Footer -->
 <div class="footer vh-100">
-  <div class="footer-custom fs-4">
+  <div class="footer-custom" style="font-size: {{ site.custom_theme.nav.font_size.footer }};">
     <br />
     <br />
     <br />
@@ -46,15 +46,17 @@
 
     <!-- Begin analytics Track -->
     {% if site.options.analytics == true %} 
-      {% include casjaysdev/analytics.html %} 
+      {% include analytics/google.html %} 
+      {% include analytics/matomo.html %} 
     {% endif %}
     <!-- Eng analytics Track -->
 
-    <!--Begin ads Code -->
+    <!--Begin adsense Code -->
     {% if site.options.ads == true %} 
-      {% include casjaysdev/ads.html %} 
+      {% include ads/adsense.html %}
+      <br />
     {% endif %}
-    <!-- End ads Code -->
+    <!-- End adsense Code -->
 
     <!-- Begin EU compliant -->
     {% if site.options.eucookie == true %}
@@ -73,8 +75,14 @@
       {% include casjaysdev/rocketchat.html %}
     {% endif %}
     <!-- End of Rocket.Chat Livechat Script -->
+
+    <!-- Start of fork me -->
+    {% if site.github.forkme == true %}
+      <a class="github-fork-ribbon {{ site.github.layout }}" href="{{ site.github.repository_url }}/fork" data-ribbon="Fork me on GitHub" title="Fork me on GitHub">Fork me on GitHub</a>
+    {% endif %}
+    <!-- End fork me -->
+    <br />
+    <br />
   </div>
-  <br />
-  <br />
 </div>
 <!-- End Footer -->

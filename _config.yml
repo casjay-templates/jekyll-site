@@ -2,7 +2,7 @@
 name: 'domain-template'
 
 # title of website
-title: 'domain-template'
+title: 'template'
 
 # Short bio or description (displayed in the header)
 description: 'Primary theme for all sites'
@@ -16,7 +16,7 @@ avatar: 'https://avatars2.githubusercontent.com/u/43266386?s=200&v=4'
 # full URI IE: /mysite { Do not add trailing / }
 baseurl: '/jekyll-site'
 
-# set gh-pages theme
+# set gh-pages theme name
 theme:
 
 # load remote theme
@@ -88,6 +88,9 @@ custom_theme:
     top: 'nav/top.html'
     left: 'nav/sidebars/left.html'
     right: 'nav/sidebars/right.html'
+    font_size:
+      default: '1.2rem'
+      footer: '14px'
 
 # set default timezone
 timezone: 'America/New_York'

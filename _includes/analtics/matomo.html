@@ -1,17 +1,3 @@
-{% if site.analytics.google.site_id %}
-<!-- begin google analytics block --->
-<div class="analytics">
-  <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.analytics.google.site_id }}"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag("js", new Date());
-    gtag("config", "{{ site.analytics.google.site_id }}");
-  </script>
-  <br />
-</div>
-<!-- end google analytics block --->
-{% endif %} 
 {% if site.analytics.piwik.site_id %}
 <!-- begin piwik analytics block --->
 <div class="piwik">
@@ -32,7 +18,6 @@
       s.parentNode.insertBefore(g, s);
     })();
   </script>
-  <br />
 </div>
 <!-- end piwik analytics block --->
 {% endif %}

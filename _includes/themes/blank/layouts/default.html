@@ -1,30 +1,7 @@
 <div>
-{% sif site.custom_theme.columns == "1" %}
-  {% if site.gallery.enabled == true %}
-    {% include functions/gallery.html %}
+  {% if site.function and static_file.path == '/_includes/functions/{{ site.function }}.html' %}
+    {% include functions/{{ site.function }}.html %}
   {% else %}
     {{ content }}
   {% endif %}
-
-{% elsif site.custom_theme.columns == "2" %}
-  {% if site.gallery.enabled == true %}
-    {% include functions/gallery.html %}
-  {% else %}
-    {{ content }}
-  {% endif %}
-
-{% elsif site.custom_theme.columns == "3" %}
-  {% if site.gallery.enabled == true %}
-    {% include functions/gallery.html %}
-  {% else %}
-    {{ content }}
-  {% endif %}
-
-{% else %}
-  <h1>
-    custom_theme/columns not set in _config.yml <br />
-    Your theme settings in _config.yml are incorrect <br />
-    Current columns: {{ site.custom_theme.columns }}
-  </h1>
-{% endif %}
 </div>

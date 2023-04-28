@@ -32,7 +32,11 @@
   <div class="container">
     <div class="row">
       <div class="col-12">
-        {{ content }}
+          {% if site.function and static_file.path == '/_includes/functions/{{ site.function }}.html' %}
+            {% include functions/{{ site.function }}.html %}
+          {% else %}
+            {{ content }}
+          {% endif %}
       </div>
     </div>
   </div>
@@ -42,7 +46,11 @@
       <div class="row">
         <div class="col-md-3"></div>
         <div class="col-md-6">
-          {{ content }}
+          {% if site.function and static_file.path == '/_includes/functions/{{ site.function }}.html' %}
+            {% include functions/{{ site.function }}.html %}
+          {% else %}
+            {{ content }}
+          {% endif %}
           </div>
         <div class="col-md-3">
           {% include {{ site.custom_theme.nav.right }} %}
@@ -55,9 +63,7 @@
           {% include {{ site.custom_theme.nav.left }} %}
         </div>
         <div class="col-md-6">
-          {% if site.function == default %}
-            {{ content }}
-          {% elsif site.function and static_file.path == '/_includes/functions/{{ site.function }}.html' %}
+          {% if site.function and static_file.path == '/_includes/functions/{{ site.function }}.html' %}
             {% include functions/{{ site.function }}.html %}
           {% else %}
             {{ content }}
