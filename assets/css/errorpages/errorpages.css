@@ -1,8 +1,8 @@
-@import url("https://fonts.googleapis.com/css?family=Fira+Sans&display=swap");
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans&display=swap');
 
 body {
   padding: 50px;
-  font: 14px/1.5 Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font: 14px/1.5 Lato, 'Helvetica Neue', Helvetica, Arial, sans-serif;
   color: #777;
   font-weight: 300;
   padding: 1.5em 0;
@@ -182,13 +182,7 @@ header ul {
 
   background: #eee;
   background: -moz-linear-gradient(top, #f8f8f8 0%, #dddddd 100%);
-  background: -webkit-gradient(
-    linear,
-    left top,
-    left bottom,
-    color-stop(0%, #f8f8f8),
-    color-stop(100%, #dddddd)
-  );
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f8f8f8), color-stop(100%, #dddddd));
   background: -webkit-linear-gradient(top, #f8f8f8 0%, #dddddd 100%);
   background: -o-linear-gradient(top, #f8f8f8 0%, #dddddd 100%);
   background: -ms-linear-gradient(top, #f8f8f8 0%, #dddddd 100%);

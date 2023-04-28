@@ -1,9 +1,9 @@
-@import url("https://fonts.googleapis.com/css?family=Fira+Sans&display=swap");
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans&display=swap');
 
 td,
 th,
 body {
-  font-family: "Fira Sans", Verdana, Helvetica, sans-serif;
+  font-family: 'Fira Sans', Verdana, Helvetica, sans-serif;
   font-size: 14px;
   font-weight: normal;
   font-variant: normal;
