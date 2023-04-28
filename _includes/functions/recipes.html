@@ -19,7 +19,6 @@
         href="{{ post.url | prepend: site.baseurl }}">{% if page.author %}{{ page.author }}{% else %}{{ site.author.name }}{% endif %}</a>
       <br>on {{ post.date | date: '%B %d, %Y @ %H:%M' }}
 
-
       <div class="post-more"><br>
         {% if site.disqus %}
         <a href="{{ post.url | prepend: site.baseurl }}#disqus_thread"> <i class="fa fa-comments"

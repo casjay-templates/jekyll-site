@@ -7,36 +7,41 @@ weight: 99
 ---
 
 {% if site.blog.enabled == true %} 
-<div class="container text-center clearfix">
-  {% for post in site.posts %} 
-  {% if post.author %} {% assign blog_author = post.author %} 
-  {% elsif site.author.name %}
-  {% assign blog_author = site.author.name %} 
-  {% endif %} 
-  {% if post.site %} 
-  {% assign author_site = post.site %} {% elsif site.author.site %} 
-    {% assign author_site = site.author.site %} 
+  <div class="container-fluid text-center clearfix">
+    <div class="row row-cols-1">
+    {% for post in site.posts %} 
+    {% if post.author %} 
+      {% assign blog_author = post.author %} 
+    {% elsif site.author.name %}
+      {% assign blog_author = site.author.name %} 
+    {% endif %} 
+    {% if post.site %} 
+    {% assign author_site = post.site %}
+    {% elsif site.author.site %} 
+      {% assign author_site = site.author.site %} 
     {% else %} 
-    {% assign author_site = blog_author prepend: 'http://github.com/' %} 
-  {% endif %}
-  <div class="row">
+      {% assign author_site = blog_author | prepend: '{{ site.blog.prepend }}' %} 
+    {% endif %}
     <div class="col col-mb-2 cl-mr-2">
       <div class="card h-100 border-success mb-3">
         <div class="card-header bg-transparent border-success">
           <a href="{{ post.url | prepend: site.baseurl }}" class="post-title" style="font-size: 30px" >
             {{ post.title | upcase }}</a>
         </div>
-        <div class="card-body text-danger">
+        <div class="card-body text-danger" style="height: 18rem;">
           <article style="font-size: 18px">
             <p class="card-text">{{ post.excerpt | markdownify }}</p>
-          </article>row
+          </article>
         </div>
+        <div class="border-warn">
         <div class="card-footer bg-transparent border-success">
           <span class="post-date">
-            <a href="{{ post.url | prepend: site.baseurl }}"> ({% include read_time.html content=post.content %}) - Read more <i class="fa fa-plus-circle" aria-hidden="true"> </i> </a>
+            <a href="{{ post.url | prepend: site.baseurl }}"> ({% include read_time.html content=post.content %})<br />
+            Read more <i class="fa fa-plus-circle" aria-hidden="true"> </i> </a>
           </span>
           <br />
           Posted by <a href="{{ author_site }}">{{ blog_author }} </a>
+        </div>
         </div>
         <br />
         {{ post.date | date: '%B %d, %Y @ %H:%M' }}

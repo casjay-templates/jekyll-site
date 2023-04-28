@@ -1,23 +1,20 @@
 # Name of your site (displayed in the header)
-name: "domain-template"
+name: 'domain-template'
 
 # title of website
-title: "domain-template"
+title: 'domain-template'
 
 # Short bio or description (displayed in the header)
-description: "Primary theme for all sites"
+description: 'Primary theme for all sites'
 
 # site tagline
-tagline: "Serve it!"
+tagline: 'Serve it!'
 
 # URL of your avatar or profile pic (you could use your GitHub profile pic)
-avatar: "https://avatars2.githubusercontent.com/u/43266386?s=200&v=4"
-
-# full domain name IE: httmp://mysite.com
-url:
+avatar: 'https://avatars2.githubusercontent.com/u/43266386?s=200&v=4'
 
 # full URI IE: /mysite { Do not add trailing / }
-baseurl: "/jekyll-site"
+baseurl: '/jekyll-site'
 
 # set site author
 author:
@@ -25,12 +22,12 @@ author:
   site:
 
 # set site type - default/gallery/recipes/blog
-function: "default"
+function: 'default'
 
 # set gallery image url
 gallery:
   enabled: false
-  folder: "/images/gallery"
+  folder: '/images/gallery'
 
 # github options
 github:
@@ -39,57 +36,57 @@ github:
   user_name:
   avatar:
   forkme: true
-  layout: "left-top"
+  layout: 'left-top'
 
 # set url for the contact form
 form:
   enabled: false
   formspree:
     enabled: false
-    submit_url: "https://formspree.io/f"
-    code: ""
+    submit_url: 'https://formspree.io/f'
+    code: ''
   formmail:
     enabled: false
-    submit_url: ""
-    recipient: "form-submission"
-    subject: "domain-template Contact Form"
-    title: "domain-template"
-    env: "REMOTE_HOST,HTTP_USER_AGENT"
+    submit_url: ''
+    recipient: 'form-submission'
+    subject: 'domain-template Contact Form'
+    title: 'domain-template'
+    env: 'REMOTE_HOST,HTTP_USER_AGENT'
     return_link:
-      url: "javascript: history.go(-1)"
-      title: "Back to Main Page"
+      url: 'javascript: history.go(-1)'
+      title: 'Back to Main Page'
     fields:
-      name: "Name"
-      email: "Email"
-      message: "Message"
-      required: "Name,Email,Message"
+      name: 'Name'
+      email: 'Email'
+      message: 'Message'
+      required: 'Name,Email,Message'
     theme:
-      background: "https://casjaysdev-sites.github.io/static/assets/images/bkg.png"
-      bgcolor: "#000000"
-      text_color: "#ffffff"
-      link_color: "#ffffff"
-      vlink_color: "#ffffff"
-      alink_color: "#ffffff"
+      background: 'https://casjaysdev-sites.github.io/static/assets/images/bkg.png'
+      bgcolor: '#000000'
+      text_color: '#ffffff'
+      link_color: '#ffffff'
+      vlink_color: '#ffffff'
+      alink_color: '#ffffff'
 
 # only set one of columns t: set a custom theme - includes/themes
 custom_theme:
-  name: "hacker"
-  columns: "3"
-  footer: "casjays-footer.html"
-  header: "casjays-header.html"
+  name: 'hacker'
+  columns: '3'
+  footer: 'casjays-footer.html'
+  header: 'casjays-header.html'
   nav:
     bar: true
     external: true
     internal: true
-    top: "nav/top.html"
-    left: "nav/sidebars/left.html"
-    right: "nav/sidebars/right.html"
+    top: 'nav/top.html'
+    left: 'nav/sidebars/left.html'
+    right: 'nav/sidebars/right.html'
 
 # set default timezone
-timezone: "America/New_York"
+timezone: 'America/New_York'
 
 # set locale
-locale: "en"
+locale: 'en'
 
 # Seperator for the the excerps
 excerpt_separator: "\n\n"
@@ -97,8 +94,8 @@ excerpt_separator: "\n\n"
 # Set social media urls
 share_this:
   rss: true
-  code: "5acc08103368f4001495b647"
-  repo: "https://github.com/casjay-templates/domain-template"
+  code: '5acc08103368f4001495b647'
+  repo: 'https://github.com/casjay-templates/domain-template'
   email:
   enabled:
     footer: true
@@ -120,11 +117,11 @@ social_links:
 
 # Verfication Settings
 webmaster_verifications:
-  google: "12345"
-  bing: "12345"
-  alexa: "12345"
-  yandex: "12345"
-  baidu: "12345"
+  google: '12345'
+  bing: '12345'
+  alexa: '12345'
+  yandex: '12345'
+  baidu: '12345'
 
 # Enable/Disable footer sections
 options:
@@ -144,44 +141,45 @@ options:
 # theme footer link
 engine:
   enabled: true
-  url: "https://github.com/casjay-templates/jekyll-site"
+  url: 'https://github.com/casjay-templates/jekyll-site'
 
 # Blog settings
 blog:
   enabled: true
+  prepend: 'https://github.com/'
   api:
 
 # RSS Feed
 feed:
-  path: "/rss.xml"
+  path: '/rss.xml'
   posts_limit: 20
 
 # eu cookie
 eu:
   cookie:
     enabled: true
-    theme: "edgeless"
-    dismiss: "dismiss"
-    link_text: "CasjaysDev Privacy Policy"
-    link_url: "https://casjaysdev.com/policy"
-    message: "This site uses cookie and in accordance with the EU GDPR<br />law this message is being displayed.<br />"
+    theme: 'edgeless'
+    dismiss: 'dismiss'
+    link_text: 'CasjaysDev Privacy Policy'
+    link_url: 'https://casjaysdev.com/policy'
+    message: 'This site uses cookie and in accordance with the EU GDPR<br />law this message is being displayed.<br />'
 
 # You can find your shortname on the Settings page of your Disqus account
 disqus:
   enabled: true
-  shortcode: "casjay"
+  shortcode: 'casjay'
 
 # clock settings
 clock:
   enabled: true
-  url: "https://freesecure.timeanddate.com/clock/i7k2kmtc/n12/fn6/fs16/fc9ff/tc000/ftb/bas2/bat1/bacfff/pa8/tt0/tw1/th1/ta1/tb4"
+  url: 'https://freesecure.timeanddate.com/clock/i7k2kmtc/n12/fn6/fs16/fc9ff/tc000/ftb/bas2/bat1/bacfff/pa8/tt0/tw1/th1/ta1/tb4'
 
 # Enter your Google Analytics web tracking code (e.g. UA-2110908-2) to activate tracking
 analytics:
   google:
     site_id:
   piwik:
-    prefix: "https"
+    prefix: 'https'
     site_id:
     url:
 
@@ -189,7 +187,7 @@ analytics:
 ads:
   google:
     enabled: false
-    format: "auto"
+    format: 'auto'
     slot:
     client:
 
@@ -202,30 +200,30 @@ discord:
   enabled: false
   server:
   channel:
-  horizontal: "bottom"
-  vertical: "left"
+  horizontal: 'bottom'
+  vertical: 'left'
 
 status_counter:
   enabled:
   site_id:
-  site_code: "ef07ac24"
+  site_code: 'ef07ac24'
 
 # You don't need to change any of the configuration flags below !!
 permalink: pretty
 
-tag_page: "/blog/tags/"
-category_page: "/blog/categories/"
+tag_page: '/blog/tags/'
+category_page: '/blog/categories/'
 
 # Setup collections
 collections:
   posts:
     output: true
-    permalink: "/blog/:year/:month/:day/:title/"
+    permalink: '/blog/:year/:month/:day/:title/'
   tags:
     output: true
-    permalink: "/blog/tags/:path/"
+    permalink: '/blog/tags/:path/'
   docs:
-    permalink: "/docs/:path/"
+    permalink: '/docs/:path/'
     output: true
   tutorials:
     output: true
@@ -266,9 +264,9 @@ defaults:
 kramdown:
   input: GFM
   syntax_highlighter: rouge
-  footnote_backlink: "&#x21A9;&#xFE0E;"
+  footnote_backlink: '&#x21A9;&#xFE0E;'
   syntax_highlighter_opts:
-    css_class: "highlight"
+    css_class: 'highlight'
 
 # Set the Sass partials directory, as we're using @imports
 sass:
@@ -277,7 +275,8 @@ sass:
 
 jekyll_tidy:
   compress_html: true
-  exclude: ["*.md"]
+  exclude:
+    - _posts/**/*.md
 
 # Use the following plug-ins
 plugins:
@@ -327,7 +326,10 @@ exclude:
 # Change output to _docs
 destination: ./_site
 
+# full domain name IE: httmp://mysite.com
+url:
+
 # webrick options
 webrick:
   headers:
-    Access-Control-Allow-Origin: "*"
+    Access-Control-Allow-Origin: '*'
