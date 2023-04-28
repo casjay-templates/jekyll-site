@@ -1,9 +1,6 @@
 <!-- Begin Footer -->
 <div class="footer vh-100">
   <div class="footer-custom" style="font-size: {{ site.custom_theme.nav.font_size.footer }};">
-    <br />
-    <br />
-    <br />
     <!-- Begin last updated -->
     {% if site.options.last_updated == true %}
       <span style="color: skyblue">
@@ -13,13 +10,6 @@
       <br />
     {% endif %}
     <!-- End last updated -->
-
-    <!-- Social Links -->
-    {% if site.options.sharethis == true %} 
-      {% include casjaysdev/sharethis.html %} 
-      <br />
-    {% endif %}
-    <!-- End Social Links-->
 
     <!-- Begin Casjays Developments Footer -->
     {% if site.options.legal == true %}

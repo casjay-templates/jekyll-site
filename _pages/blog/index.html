@@ -9,7 +9,7 @@ weight: 99
 {% if site.blog.enabled == true %} 
 <div class="clearfix">
   <div class="container text-center">
-    <div class="row row-cols-1">
+    <div class="row">
     {% for post in site.posts %} 
     {% if post.author %} 
       {% assign blog_author = post.author %} 
@@ -23,13 +23,13 @@ weight: 99
     {% else %} 
       {% assign author_site = blog_author | prepend: '{{ site.blog.prepend }}' %} 
     {% endif %}
-    <div class="col col-mb-2 cl-mr-2">
+    <div class="col-md-6 cl-mr-2 h-50">
       <div class="card h-100 border-success mb-3">
         <div class="card-header bg-transparent border-success">
-          <a href="{{ post.url | prepend: site.baseurl }}" class="post-title" style="font-size: 30px" >
+          <a href="{{ post.url | prepend: site.baseurl }}" class="post-title" style="font-size: 20px" >
             {{ post.title | upcase }}</a>
         </div>
-        <div class="card-body text-danger" style="height: 18rem;">
+        <div class="card-body text-danger" style="height: 12rem;">
           <article style="font-size: 18px">
             <p class="card-text">{{ post.excerpt | markdownify }}</p>
           </article>

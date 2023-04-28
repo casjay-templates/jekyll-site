@@ -1,6 +1,6 @@
 <div>
-  {% if site.function and static_file.path == '/_includes/functions/{{ site.function }}.html' %}
-    {% include functions/{{ site.function }}.html %}
+  {% if site.function_type %}
+    {% include functions/{{ site.function_type }}.html %}
   {% else %}
     {{ content }}
   {% endif %}

@@ -1,16 +1,16 @@
 <!-- begin github block --->
-<div class="col" style="width: auto;text-align: center;">
+<div class="col" style="width: 100%;text-align: center;">
   GitHub REPO Links:<br />
   {% if site.github.user_name %}
-    <a href="https://gihub.com/{{ site.github.user_name }}" class="btn btn-github icon btn.block">{{ site.github.user_name }}</a>
+    <a href="https://gihub.com/{{ site.github.user_name }}" class="btn btn-github icon block">{{ site.github.user_name }}</a>
     <br />
   {% endif %}
   {% if site.github.repository_url %}
-    <a href="{{ site.github.repository_url }}" class="btn btn-github icon btn.block">View source on GitHub</a>
+    <a href="{{ site.github.repository_url }}" class="btn btn-github icon block">View on GitHub</a>
     <br />
   {% endif %}
   {% if site.github.tar_url %}
-    <a href="{{ site.github.tar_url }}" class="btn btn-github icon btn.block">Download as .tar.gz</a>
+    <a href="{{ site.github.tar_url }}" class="btn btn-github icon block">Download as .tar.gz</a>
     <br />
   {% endif %}
 </div>

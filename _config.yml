@@ -28,7 +28,7 @@ author:
   site: 'https://github.com/casjay-templates/jekyll-site'
 
 # set site type - default/gallery/recipes/blog
-function: 'default'
+function_type: 'blog'
 
 # set gallery image url
 gallery:
@@ -89,8 +89,9 @@ custom_theme:
     left: 'nav/sidebars/left.html'
     right: 'nav/sidebars/right.html'
     font_size:
-      default: '1.2rem'
-      footer: '14px'
+      default: '1rem'
+      nav: '.9rem'
+      footer: '.8rem'
 
 # set default timezone
 timezone: 'America/New_York'
@@ -135,6 +136,7 @@ social_links:
   instagram: 'casjay'
   linkedin: 'casjay'
   pinterest: 'casjay'
+  stackoverflow: '2524088/casjay'
   email: 'casjay'
 
 # Verfication Settings
@@ -277,10 +279,23 @@ defaults:
     values:
       layout: posts
   - scope:
-      path: images
+      path: assets/js
+      type: js
+    values:
+      layout: js
+  - scope:
+      path: assets/css
+      type: css
+    values:
+      layout: css
+  - scope:
+      path: assets/images
       type: images
     values:
       layout: images
+
+# build config
+highlighter: 'pygments'
 
 # Jekyll 3 now only supports Kramdown for Markdown
 kramdown:

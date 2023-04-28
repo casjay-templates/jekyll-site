@@ -9,15 +9,37 @@
 </head>
 
 <body class="text-center align-item-center" style="font-size: {{ site.custom_theme.nav.font_size.default }};">
-  <div class="container">
-    {% if site.custom_theme.directory %}
+  <div class="container-fluid" style="display:flexbox;max-width: 95%;margin-left: 20px;margin-right: 20px;justify-content: center;">
+    {% if site.function_type == 'default' %}
+      <!-- begin default -->
+      {% include themes/{{ site.custom_theme.directory }}/layouts/default.html %}
+    {% elsif site.function_type == 'blog' %}
+      <!-- begin blog -->
+      {% include functions/blog.html %}
+    {% elsif site.function_type == 'gallery' %}
+      <!-- begin gallery -->
+      {% include functions/gallery.html %}
+    {% elsif site.function_type == 'recipes' %}
+      <!-- begin recipes -->
+      {% include functions/recipes.html %}
+    {% elsif site.custom_theme.directory %}
+      <!-- begin default -->
       {% include themes/{{ site.custom_theme.directory }}/layouts/default.html %}
     {% else %}
       <div>
+      <!-- begin -->
       {{ content }}
       </div>
     {% endif %}
+    <!-- end default -->
     <br />
+    <div class="container text-center align-item-center">
+      <hr class="hr" style="width: 100%; border: none;border-top: 3px double #dfdbdb;color: #949393;overflow: hidden;height: 5px;" />
+    {% if site.function_type != 'default' %}
+      <div class="container text-center align-item-center">
+        {% include casjaysdev/sociallinks.html %}
+      </div>
+    {% endif %}
     <br />
     <br />
     <br />
@@ -29,6 +51,7 @@
     <br />
     <br />
   </div>
+</div>
 </body>
 
 </html>

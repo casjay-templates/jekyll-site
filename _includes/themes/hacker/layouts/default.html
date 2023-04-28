@@ -1,75 +1,33 @@
 <div class="container-fluid align-items-center text-center">
-  <div class="row">
-    <div class="col-md-3">
-      <a href="{{ site.baseurl }}"><img src="{{ site.avatar }}" border="2" /></a>
-    </div>
-    <div class="col-md-6">
-      <span class="">
-        <h1>.// {{ site.name }}</h1>
-        <h2>{{ site.description }}</h2>
-        <h4>{{ site.tagline }}</h4>
-      </span>
-
-      {% if site.custom_theme.nav.bar == true %}
-        <nav>
-          <br />
-          <h4>
-            {% include {{ site.custom_theme.nav.top }} %}
-          </h4>
-        </nav>
-      {% endif %}
-    </div>
-    {% if site.github.show %}
-    <div class="col-md-3">
-      {% include github.html %}
-    </div>
-    {% endif %}
-    <hr class="hr" style="width: 100%; border: none;border-top: 3px double #dfdbdb;color: #949393;overflow: hidden;height: 5px;" />
-  </div>
-
+  {% include themes/{{ site.custom_theme.directory }}/page_header.html %}
   <br />
   {% if site.custom_theme.columns == "1" %}
   <div class="container">
-    <div class="row">
-      <div class="col-12">
-          {% if site.function and static_file.path == '/_includes/functions/{{ site.function }}.html' %}
-            {% include functions/{{ site.function }}.html %}
-          {% else %}
-            {{ content }}
-          {% endif %}
-      </div>
-    </div>
+    {{ content }}
   </div>
 
   {% elsif site.custom_theme.columns == "2" %}
     <div class="container-fluid">
       <div class="row">
-        <div class="col-md-3"></div>
-        <div class="col-md-6">
-          {% if site.function and static_file.path == '/_includes/functions/{{ site.function }}.html' %}
-            {% include functions/{{ site.function }}.html %}
-          {% else %}
-            {{ content }}
-          {% endif %}
+        <div class="col-md-2 order-md-12">
+        </div>
+        <div class="col-md-8">
+          {{ content }}
           </div>
-        <div class="col-md-3">
+        <div class="col-md-2">
           {% include {{ site.custom_theme.nav.right }} %}
       </div>
     </div>
   {% elsif site.custom_theme.columns == "3" %}
     <div class="container-fluid">
       <div class="row">
-        <div class="col-md-3">
+        <div class="col-md-2 order-md-12" style="text-align: left;">
           {% include {{ site.custom_theme.nav.left }} %}
         </div>
-        <div class="col-md-6">
-          {% if site.function and static_file.path == '/_includes/functions/{{ site.function }}.html' %}
-            {% include functions/{{ site.function }}.html %}
-          {% else %}
-            {{ content }}
-          {% endif %}
+        <div class="col-md-8">
+          {{ content }}
         </div>
-        <div class="col-md-3">
+        <div class="col-md-2" style="text-align: center;justify-content: right;">
           {% include {{ site.custom_theme.nav.right }} %}</div>
       </div>
     </div>
