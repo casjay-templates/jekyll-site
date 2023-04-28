@@ -20,7 +20,7 @@ baseurl: '/jekyll-site'
 theme:
 
 # load remote theme
-remote_theme: 'https://github.com/casjay-templates/jekyll-site'
+#remote_theme: 'https://github.com/casjay-templates/jekyll-site'
 
 # set site author
 author:

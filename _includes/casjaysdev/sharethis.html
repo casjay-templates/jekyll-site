@@ -14,9 +14,11 @@
   <br />
   {% if site.share_this.enabled.script == true %}
     <div class="container" style="width: 20%; margin: 0 auto; columns: auto; text-align: center" align="center">
-      <div class="sharethis-inline-share-buttons"></div>
-      <script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property={{ site.share_this.code }}&product=inline-share-buttons" async="async"></script>
+      <div class="sharethis-inline-share-buttons">
+        <script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property={{ site.share_this.code }}&product=inline-share-buttons" async="async"></script>
+      </div>
     </div>
+  {% endif %}
 </div>
 <!-- end sharethis block --->
 {% endif %}
