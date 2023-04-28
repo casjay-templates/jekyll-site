@@ -28,7 +28,7 @@ author:
   site: 'https://github.com/casjay-templates/jekyll-site'
 
 # set site type - default/gallery/recipes/blog
-function_type: 'blog'
+function_type: 'default'
 
 # set gallery image url
 gallery:
