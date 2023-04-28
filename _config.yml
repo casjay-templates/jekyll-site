@@ -17,7 +17,7 @@ avatar: 'https://avatars2.githubusercontent.com/u/43266386?s=200&v=4'
 baseurl: '/jekyll-site'
 
 # set theme name
-theme: casjaysdev-jekyll-theme
+theme:
 
 # set site author
 author:
