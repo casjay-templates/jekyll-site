@@ -16,38 +16,49 @@
 
     <!-- Social Links -->
     {% if site.options.sharethis == true %} 
-      {% include casjaysdev/sharethis.html %} 
+      {% include casjaysdev/sharethis.html %}
+      <br />
     {% endif %}
     <!-- End Social Links-->
 
     <!-- Begin Casjays Developments Footer -->
-    {% if site.options.legal == true %} 
+    {% if site.options.legal == true %}
+      <br />
       {% include casjaysdev/legal.html %} 
+      <br />
     {% endif %}
     <!-- End Casjays Developments Footer -->
 
     <!-- Begin theme Code -->
     {% if site.options.engine == true %} 
       {% include casjaysdev/theme.html %} 
+      <br />
     {% endif %}
     <!-- End theme Code -->
 
     <!-- clock -->
     {% if site.options.clock == true %} 
-      {% include casjaysdev/clock.html %} 
+      <br />
+      <br />
+      {% include casjaysdev/clock.html %}
+      <br />
+      <br />
     {% endif %}
     <!-- End clock-->
 
     <!--Begin Statcounter Code -->
     {% if site.options.statcounter == true %} 
       {% include casjaysdev/statcounter.html %} 
+      <br />
     {% endif %}
     <!-- End Statcounter Code -->
 
     <!-- Begin analytics Track -->
     {% if site.options.analytics == true %} 
       {% include analytics/google.html %} 
+      <br />
       {% include analytics/matomo.html %} 
+      <br />
     {% endif %}
     <!-- Eng analytics Track -->
 
@@ -61,24 +72,28 @@
     <!-- Begin EU compliant -->
     {% if site.options.eucookie == true %}
       {% include casjaysdev/eucookie.html %}
+      <br />
     {% endif %}
     <!-- End EU compliant -->
 
     <!-- Begin WidgetBot Code -->
     {% if site.options.discord == true %}
-      {% include casjaysdev/widgetbot.html %} 
+      {% include casjaysdev/widgetbot.html %}
+      <br />
     {% endif %}
     <!-- End WidgetBot Code -->
 
     <!-- Start of Rocket.Chat Livechat Script -->
     {% if site.options.rocketchat == true %} 
       {% include casjaysdev/rocketchat.html %}
+      <br />
     {% endif %}
     <!-- End of Rocket.Chat Livechat Script -->
 
     <!-- Start of fork me -->
     {% if site.github.forkme == true %}
       <a class="github-fork-ribbon {{ site.github.layout }}" href="{{ site.github.repository_url }}/fork" data-ribbon="Fork me on GitHub" title="Fork me on GitHub">Fork me on GitHub</a>
+      <br />
     {% endif %}
     <!-- End fork me -->
     <br />

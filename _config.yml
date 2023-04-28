@@ -109,6 +109,7 @@ error_pages:
   error_image: '/assets/images/oops.gif'
   css_file: '/assets/css/errorpages/errorpages.css'
   font_site:
+    default: '1.2rem'
     header: '48px'
     body: '24px'
 

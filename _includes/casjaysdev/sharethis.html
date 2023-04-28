@@ -8,7 +8,7 @@
     <a href="{{ site.share_this.repo }}" target="_blank" title="Github"><img alt="Tweet" src="https://casjaysdev-sites.github.io/static/default-icons/social/github-48x48.png"></a>
   {% endif %} 
   {% if site.share_this.email %}
-    <a href="mailto:?subject=Thought you might like this site"><img alt="Send via email" src="https://casjaysdev-sites.github.io/static/default-icons/social/email-48x48.png"/></a>
+    <a href="mailto:{{ site.share_this.email }}?subject=Thought you might like this site"><img alt="Send via email" src="https://casjaysdev-sites.github.io/static/default-icons/social/email-48x48.png"/></a>
   {% endif %}
   <br />
   <br />
@@ -17,8 +17,6 @@
       <div class="sharethis-inline-share-buttons"></div>
       <script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property={{ site.share_this.code }}&product=inline-share-buttons" async="async"></script>
     </div>
-  {% endif %}
-  <br />
 </div>
 <!-- end sharethis block --->
 {% endif %}

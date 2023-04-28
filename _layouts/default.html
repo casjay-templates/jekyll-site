@@ -4,16 +4,18 @@
 <head>
   {% include casjays-header.html %}
   {% if site.custom_theme.directory %}
-  {% include themes/{{ site.custom_theme.directory }}/meta.html %}
+    {% include themes/{{ site.custom_theme.directory }}/meta.html %}
   {% endif %}
 </head>
 
-<body class="text-center align-item-center">
+<body class="text-center align-item-center" style="font-size: {{ site.custom_theme.nav.font_size.default }};">
   <div class="container">
     {% if site.custom_theme.directory %}
-    {% include themes/{{ site.custom_theme.directory }}/layouts/default.html %}
+      {% include themes/{{ site.custom_theme.directory }}/layouts/default.html %}
     {% else %}
-    {{ content }}
+    <div>
+      {{ content }}
+    </div>
     {% endif %}
     <br />
     <br />
