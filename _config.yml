@@ -199,7 +199,7 @@ rocketchat:
   url:
 
 discord:
-  enabled: true
+  enabled: false
   server:
   channel:
   horizontal: "bottom"
