@@ -19,17 +19,11 @@ weight: 99
     {% else %} 
     {% assign author_site = blog_author prepend: 'http://github.com/' %} 
   {% endif %}
-  <div class="row align-items-center align-center">
-    <div class="col-sm">
-      <div class="card border-success mb-3">
+  <div class="row row-cols-6 align-items-center align-center">
+    <div class="col col-mb-2 cl-mr-2">
+      <div class="card h-100 border-success mb-3">
         <div class="card-header bg-transparent border-success">
-          <a
-            href="{{ post.url | prepend: site.baseurl }}"
-            class="post-title"
-            style="font-size: 30px"
-          >
-            {{ post.title | upcase }}
-          </a>
+          <a href="{{ post.url | prepend: site.baseurl }}" class="post-title" style="font-size: 30px" >{{ post.title | upcase }}</a>
         </div>
         <div class="card-body text-danger">
           <article style="font-size: 18px">
@@ -38,10 +32,7 @@ weight: 99
         </div>
         <div class="card-footer bg-transparent border-success">
           <span class="post-date">
-            <a href="{{ post.url | prepend: site.baseurl }}">
-              ({% include read_time.html content=post.content %}) - Read more
-              <i class="fa fa-plus-circle" aria-hidden="true"> </i>
-            </a>
+            <a href="{{ post.url | prepend: site.baseurl }}"> ({% include read_time.html content=post.content %}) - Read more <i class="fa fa-plus-circle" aria-hidden="true"> </i> </a>
           </span>
           <br />
           Posted by <a href="{{ author_site }}">{{ blog_author }} </a>
@@ -50,9 +41,7 @@ weight: 99
         {{ post.date | date: '%B %d, %Y @ %H:%M' }}
         <div class="card-footer bg-transparent border-danger">
           {% if site.disqus %}
-          <a href="{{ post.url | prepend: site.baseurl }}#disqus_thread">
-            <i class="fa fa-comments" aria-hidden="true"></i> Comment
-          </a>
+          <a href="{{ post.url | prepend: site.baseurl }}#disqus_thread"><i class="fa fa-comments" aria-hidden="true"></i> Comment</a>
           {% endif %}
         </div>
       </div>
