@@ -39,7 +39,7 @@ github:
   user_name:
   avatar:
   forkme: true
-  layout: "right-top"
+  layout: "left-top"
 
 # set url for the contact form
 form:
