@@ -17,7 +17,10 @@ avatar: 'https://avatars2.githubusercontent.com/u/43266386?s=200&v=4'
 baseurl: '/jekyll-site'
 
 # set gh-pages theme
-theme: ''
+theme:
+
+# load remote theme
+remote_theme: 'https://github.com/casjay-templates/jekyll-site'
 
 # set site author
 author:
