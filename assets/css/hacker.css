@@ -90,7 +90,7 @@ video {
 body {
   margin: 0;
   padding: 0;
-  background: #151515 url("/assets/images/bkg.png") 0 0;
+  background: #151515 url("{{ site.baseurl }}/assets/images/bkg.png") 0 0;
   color: #eaeaea;
   font-size: 16px;
   line-height: 25px;
@@ -462,8 +462,7 @@ hr {
 
 .btn-github .icon {
   opacity: 0.6;
-  background: url("/assets/images/blacktocat.png") 0 0
-    no-repeat;
+  background: url("/assets/images/blacktocat.png") 0 0 no-repeat;
 }
 
 a {
