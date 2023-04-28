@@ -17,27 +17,27 @@ avatar: 'https://avatars2.githubusercontent.com/u/43266386?s=200&v=4'
 baseurl: '/jekyll-site'
 
 # set theme name
-theme:
+theme: hacker
 
 # set site author
 author:
-  name:
-  site:
+  name: 'CasjaysDev'
+  site: 'https://github.com/casjay-templates/jekyll-site'
 
 # set site type - default/gallery/recipes/blog
 function: 'default'
 
 # set gallery image url
 gallery:
-  enabled: false
+  enabled: true
   folder: '/images/gallery'
 
 # github options
 github:
   show: true
-  repository_url:
-  user_name:
-  avatar:
+  repository_url: 'https://github.com/casjay-templates/jekyll-site'
+  user_name: 'casjay-templates'
+  avatar: 'https://avatars2.githubusercontent.com/u/43266386?s=200&v=4'
   forkme: true
   layout: 'left-top'
 
@@ -73,7 +73,8 @@ form:
 
 # only set one of columns t: set a custom theme - includes/themes
 custom_theme:
-  name: 'hacker'
+  name: 'casjaysdev-jekyll-theme'
+  directory: 'hacker'
   columns: '3'
   footer: 'casjays-footer.html'
   header: 'casjays-header.html'
@@ -110,7 +111,7 @@ share_this:
   rss: true
   code: '5acc08103368f4001495b647'
   repo: 'https://github.com/casjay-templates/domain-template'
-  email:
+  email: 'git-admin@casjaysdev.com'
   enabled:
     footer: true
     script: true
@@ -119,15 +120,15 @@ share_this:
 social_links:
   enabled: true
   rss: true
-  namename:
-  github:
-  twitter:
-  facebook:
-  flickr:
-  instagram:
-  linkedin:
-  pinterest:
-  email:
+  namename: 'casjay'
+  github: 'casjay'
+  twitter: 'casjay'
+  facebook: 'casjay'
+  flickr: 'casjay'
+  instagram: 'casjay'
+  linkedin: 'casjay'
+  pinterest: 'casjay'
+  email: 'casjay'
 
 # Verfication Settings
 webmaster_verifications:

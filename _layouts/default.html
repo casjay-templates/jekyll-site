@@ -3,15 +3,15 @@
 
 <head>
   {% include casjays-header.html %}
-  {% if site.custom_theme.name %}
-  {% include themes/{{ site.custom_theme.name }}/meta.html %}
+  {% if site.custom_theme.directory %}
+  {% include themes/{{ site.custom_theme.directory }}/meta.html %}
   {% endif %}
 </head>
 
 <body class="text-center align-item-center">
   <div class="container">
-    {% if site.custom_theme.name %}
-    {% include themes/{{ site.custom_theme.name }}/layouts/default.html %}
+    {% if site.custom_theme.directory %}
+    {% include themes/{{ site.custom_theme.directory }}/layouts/default.html %}
     {% else %}
     {{ content }}
     {% endif %}

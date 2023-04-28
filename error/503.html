@@ -9,8 +9,8 @@ permalink: /503.html
 
 <head>
   <link rel="stylesheet" href="{{ site.error_pages.css_file | prepend: site.baseurl }}">
-  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/{{ site.custom_theme.name }}.css">
-  {% if site.custom_theme.name %}
+  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/{{ site.custom_theme.directory }}.css">
+  {% if site.custom_theme.directory %}
     {% include casjays-header.html %}
   {% endif %}
   <title>Service Unavailable</title>
