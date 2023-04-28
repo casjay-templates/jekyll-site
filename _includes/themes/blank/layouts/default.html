@@ -1,36 +1,30 @@
+<div>
 {% sif site.custom_theme.columns == "1" %}
-  <div>
-    {% if site.gallery.enabled == true %}
-      {% include image-gallery.html %}
-    {% else %}
-      {{ content }}
-    {% endif %}
-  </div>
+  {% if site.gallery.enabled == true %}
+    {% include functions/gallery.html %}
+  {% else %}
+    {{ content }}
+  {% endif %}
 
 {% elsif site.custom_theme.columns == "2" %}
-  <div>
-    {% if site.gallery.enabled == true %}
-      {% include image-gallery.html %}
-    {% else %}
-      {{ content }}
-    {% endif %}
-  </div>
+  {% if site.gallery.enabled == true %}
+    {% include functions/gallery.html %}
+  {% else %}
+    {{ content }}
+  {% endif %}
 
 {% elsif site.custom_theme.columns == "3" %}
-  <div>
-    {% if site.gallery.enabled == true %}
-      {% include image-gallery.html %}
-    {% else %}
-      {{ content }}
-    {% endif %}
-  </div>
+  {% if site.gallery.enabled == true %}
+    {% include functions/gallery.html %}
+  {% else %}
+    {{ content }}
+  {% endif %}
 
 {% else %}
-  <div>
-    <h1>
-      custom_theme/columns not set in _config.yml <br />
-      Your theme settings in _config.yml are incorrect <br />
-      Current columns: {{ site.custom_theme.columns }}
-    </h1>
-  </div>
+  <h1>
+    custom_theme/columns not set in _config.yml <br />
+    Your theme settings in _config.yml are incorrect <br />
+    Current columns: {{ site.custom_theme.columns }}
+  </h1>
 {% endif %}
+</div>
