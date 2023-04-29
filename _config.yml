@@ -315,6 +315,27 @@ jekyll_tidy:
   exclude:
     - _posts/**/*.md
 
+whitelist:
+  - jemoji
+  - kramdown
+  - jekyll-avatar
+  - jekyll-feed
+  - jekyll-mentions
+  - jekyll-redirect-from
+  - jekyll-seo-tag
+  - jekyll-gist
+  - jekyll-coffeescript
+  - jekyll-assets
+  - jekyll-sitemap
+  - jekyll-analytics
+  - jekyll-remote-include
+  - jekyll-menus
+  - jekyll-remote-theme
+  - jekyll-tidy
+  - jekyll-admin
+  - jekyll_pages_api
+  - jekyll-github-metadata
+
 # Use the following plug-ins
 plugins:
   - jemoji
@@ -335,6 +356,7 @@ plugins:
   - jekyll-tidy
   - jekyll-admin
   - jekyll_pages_api
+  - jekyll-github-metadata
 
 keep_files:
   - default-*
