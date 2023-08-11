@@ -5,7 +5,7 @@ Gem::Specification.new do |spec|
   spec.name                  = 'casjaysdev-jekyll-theme'
   spec.version               = '0.2.4'
   spec.authors               = ['CasjaysDev']
-  spec.email                 = ['gem-admin@casjaysdev.com']
+  spec.email                 = ['gem-admin@casjaysdev.pro']
   
   spec.summary               = 'CasjaysDev jekyll theme'
   spec.homepage              = 'https://github.com/casjay-templates/jekyll-site'

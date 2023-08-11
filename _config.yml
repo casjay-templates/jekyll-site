@@ -119,7 +119,7 @@ share_this:
   rss: true
   code: '5acc08103368f4001495b647'
   repo: 'https://github.com/casjay-templates/domain-template'
-  email: 'git-admin@casjaysdev.com'
+  email: 'git-admin@casjaysdev.pro'
   enabled:
     footer: true
     script: true
@@ -185,7 +185,7 @@ eu:
     theme: 'edgeless'
     dismiss: 'dismiss'
     link_text: 'CasjaysDev Privacy Policy'
-    link_url: 'https://casjaysdev.com/policy'
+    link_url: 'https://casjaysdev.pro/policy'
     message: 'This site uses cookie and in accordance with the EU GDPR<br />law this message is being displayed.<br />'
 
 # You can find your shortname on the Settings page of your Disqus account
