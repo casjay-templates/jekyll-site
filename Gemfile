@@ -1,4 +1,3 @@
-source "https://rubygems.org" 
 gem 'jekyll', '>= 3.5', '< 5.0', group: :jekyll_plugins
 gem 'github-pages', '~> 228', group: :jekyll_plugins
 gem 'kramdown', group: :jekyll_plugins
@@ -21,4 +20,5 @@ gem 'jekyll-admin', '~> 0.9.0', '>= 0.9.0', group: :jekyll_plugins
 gem 'jekyll-remote-include', '~> 1.0', '>= 1.0.2', group: :jekyll_plugins
 gem 'jekyll-theme-hacker', '~> 0.2.0', group: :jekyll_plugins
 gem 'casjaysdev-jekyll-theme', '>=0.1.7', group: :jekyll_plugins
-gem 'jekyll-tidy'
+gem "sprockets", "~> 3.7", group: :jekyll_plugins
+gem 'jekyll-tidy', group: :jekyll_plugins
