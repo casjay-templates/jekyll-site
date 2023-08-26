@@ -1,6 +1,6 @@
 function homepage() {
-  let proto = location.protocol || 'https';
-  let port = location.port || '443';
+  let proto = location.protocol;
+  let port = location.port;
   let currentSite = window.location.hostname;
   window.location = proto + '//' + currentSite + ':' + port;
 }
