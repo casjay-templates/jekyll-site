@@ -3,7 +3,7 @@
 
 Gem::Specification.new do |spec|
   spec.name                  = 'casjaysdev-jekyll-theme'
-  spec.version               = '0.2.5'
+  spec.version               = '0.2.6'
   spec.authors               = ['CasjaysDev']
   spec.email                 = ['gem-admin@casjaysdev.pro']
   
