@@ -32,7 +32,7 @@ permalink: /500.html
         Something is very broken!!<br />
         <img alt="error" height="400" width="400" src="{{ site.error_pages.error_image | prepend: site.baseurl }}"/>
       </div>
-        <a style="cursor: pointer;" onclick="javascript:homepage();" class="btn btn-success"><span id="display-domain"></span></a>
+        <a onclick="javascript:homepage();" class="btn btn-lg btn-success"><span id="display-domain"></span></a><br />
         <br />
         {% if site.error_pages.show_fork == true %}
           <a class="github-fork-ribbon left-top" href="{{ site.github.repository_url }}/fork" data-ribbon="Fork me on GitHub" title="Fork me on GitHub">Fork me on GitHub</a>
