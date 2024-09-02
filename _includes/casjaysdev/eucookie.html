@@ -6,23 +6,24 @@
     window.cookieconsent.initialise({
       palette: {
         popup: {
-          background: "#64386b",
-          text: "#ffcdfd",
+          background: '#64386b',
+          text: '#ffcdfd',
         },
         button: {
-          background: "#f8a8ff",
-          text: "#3f0045",
+          background: '#f8a8ff',
+          text: '#3f0045',
         },
       },
-      theme: "{{ site.eu.cookie.theme }}",
+      theme: '{{ site.eu.cookie.theme }}',
       content: {
-        message: "{{ site.eu.cookie.message }}",
-        dismiss: "{{ site.eu.cookie.dismiss }}",
-        link: "{{ site.eu.cookie.link_text }}",
-        href: "{{ site.eu.cookie.link_url }}",
+        message: '{{ site.eu.cookie.message }}',
+        dismiss: '{{ site.eu.cookie.dismiss }}',
+        link: '{{ site.eu.cookie.link_text }}',
+        href: '{{ site.eu.cookie.link_url }}',
       },
     });
   </script>
+  <br />
 </div>
 <!-- end eu cookie block --->
 {% endif %}
