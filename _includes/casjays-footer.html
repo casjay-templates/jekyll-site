@@ -1,89 +1,86 @@
 <!-- Begin Footer -->
 <div class="footer vh-100">
   <div class="footer-custom" style="font-size: {{ site.custom_theme.nav.font_size.footer }};">
-    <!-- Begin last updated -->
-    {% if site.options.last_updated == true %}
-      <span style="color: skyblue">
-        Last update on: {{ site.time | date: '%B %d, %Y at %H:%M' }}
-      </span>
-      <br />
-      <br />
-    {% endif %}
-    <!-- End last updated -->
-
     <!-- Begin Casjays Developments Footer -->
     {% if site.options.legal == true %}
-      <br />
-      {% include casjaysdev/legal.html %} 
-      <br />
+    <br />
+    {% include casjaysdev/legal.html %}
+    <br />
     {% endif %}
     <!-- End Casjays Developments Footer -->
 
     <!-- Begin theme Code -->
-    {% if site.options.engine == true %} 
-      {% include casjaysdev/theme.html %} 
-      <br />
+    {% if site.options.engine == true %} {% include casjaysdev/theme.html %}
+    <br />
     {% endif %}
     <!-- End theme Code -->
 
     <!-- clock -->
-    {% if site.options.clock == true %} 
-      <br />
-      <br />
-      {% include casjaysdev/clock.html %}
-      <br />
-      <br />
+    {% if site.options.clock == true %}
+    <br />
+    <br />
+    {% include casjaysdev/clock.html %}
+    <br />
+    <br />
     {% endif %}
     <!-- End clock-->
 
     <!--Begin Statcounter Code -->
-    {% if site.options.statcounter == true %} 
-      {% include casjaysdev/statcounter.html %} 
-      <br />
+    {% if site.options.statcounter == true %} {% include casjaysdev/statcounter.html %}
+    <br />
     {% endif %}
     <!-- End Statcounter Code -->
 
     <!-- Begin analytics Track -->
-    {% if site.options.analytics == true %} 
-      {% include analytics/google.html %} 
-      <br />
-      {% include analytics/matomo.html %} 
-      <br />
+    {% if site.options.analytics == true %} {% include analytics/google.html %}
+    <br />
+    {% include analytics/matomo.html %}
+    <br />
     {% endif %}
     <!-- Eng analytics Track -->
 
     <!--Begin adsense Code -->
-    {% if site.options.ads == true %} 
-      {% include ads/adsense.html %}
-      <br />
+    {% if site.options.ads == true %} {% include ads/adsense.html %}
+    <br />
     {% endif %}
     <!-- End adsense Code -->
 
+    <!-- Begin last updated -->
+    {% if site.options.last_updated == true %}
+    <span style="color: skyblue"> Last update on: {{ site.time | date: '%B %d, %Y at %H:%M' }} </span>
+    <br />
+    <br />
+    {% endif %}
+    <!-- End last updated -->
+
     <!-- Begin EU compliant -->
-    {% if site.options.eucookie == true %}
-      {% include casjaysdev/eucookie.html %}
-      <br />
+    {% if site.options.eucookie == true %} {% include casjaysdev/eucookie.html %}
+    <br />
     {% endif %}
     <!-- End EU compliant -->
 
     <!-- Begin WidgetBot Code -->
-    {% if site.options.discord == true %}
-      {% include casjaysdev/widgetbot.html %}
-      <br />
+    {% if site.options.discord == true %} {% include casjaysdev/widgetbot.html %}
+    <br />
     {% endif %}
     <!-- End WidgetBot Code -->
 
     <!-- Start of Rocket.Chat Livechat Script -->
-    {% if site.options.rocketchat == true %} 
-      {% include casjaysdev/rocketchat.html %}
-      <br />
+    {% if site.options.rocketchat == true %} {% include casjaysdev/rocketchat.html %}
+    <br />
     {% endif %}
     <!-- End of Rocket.Chat Livechat Script -->
 
     <!-- Start of fork me -->
     {% if site.github.forkme == true %}
-      <a class="github-fork-ribbon {{ site.github.layout }}" href="{{ site.github.repository_url }}/fork" data-ribbon="Fork me on GitHub" title="Fork me on GitHub">Fork me on GitHub</a>
-      <br />
+    <a
+      class="github-fork-ribbon {{ site.github.layout }}"
+      href="{{ site.github.repository_url }}/fork"
+      data-ribbon="Fork me on GitHub"
+      title="Fork me on GitHub"
+      >Fork me on GitHub</a
+    >
+    <br />
     {% endif %}
     <!-- End fork me -->
     <br />
